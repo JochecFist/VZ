@@ -1,2 +1,2 @@
-Výzkumný úkol Martina Jochece
+Výzkumný úkol Martina Jochece  
 Strojové učení pro adaptaci autonomních agentů
