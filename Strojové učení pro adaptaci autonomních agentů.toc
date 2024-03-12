@@ -11,9 +11,10 @@
 \contentsline {subsubsection}{Procházení stromu}{17}{section*.6}%
 \contentsline {subsubsection}{Evoluční algoritmy}{18}{section*.7}%
 \contentsline {subsection}{\numberline {1.1.4}AI ve 3D akčních hrách}{18}{subsection.1.1.4}%
-\contentsline {subsubsection}{F.E.A.R.}{18}{section*.8}%
-\contentsline {subsubsection}{Middle Earth: Shadow of War}{20}{section*.9}%
-\contentsline {section}{\numberline {1.2}Strojové učení}{20}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Návrh algoritmů pro adaptaci a hodnocení agenta}{21}{chapter.2}%
-\contentsline {chapter}{Závěr}{23}{chapter*.10}%
-\contentsline {chapter}{Literatura}{24}{chapter*.10}%
+\contentsline {subsubsection}{Obecné úkoly AI}{18}{section*.8}%
+\contentsline {subsubsection}{F.E.A.R.}{19}{section*.9}%
+\contentsline {subsubsection}{Middle Earth: Shadow of Mordor a Middle Earth: Shadow of War}{21}{section*.10}%
+\contentsline {section}{\numberline {1.2}Strojové učení}{22}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Návrh algoritmů pro adaptaci a hodnocení agenta}{23}{chapter.2}%
+\contentsline {chapter}{Závěr}{25}{chapter*.11}%
+\contentsline {chapter}{Literatura}{26}{chapter*.11}%

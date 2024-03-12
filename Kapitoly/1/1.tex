@@ -117,14 +117,12 @@ Evoluční algoritmy (EA)\cite{Yu2010} jsou podmnožinou evolučních výpočtů
 V této subsekci je základní popis úkolů AI v 3D akčních hrách a také příklady existujících 3D akčních her a jak bylo jejich AI vytvořeno.
 
 \subsubsection{Obecné úkoly AI}
-DOPLNIT!!!!
+V 3D akčních hrách by umělá inteligence měla umět pohybovat se virtuálním světem, takže například ovládat základní pohyby po mapě ale také pokročilé strategie jako například vylézt po zdi nebo skrčit se a tak dále. Klíčové jsou také poznávací schopnosti a přizpůsobivost, neboli například dokázat předvídat hráčovi interakce s objekty nebo se samotnou umělou inteligencí. AI by mělo také vynikat v boji a používat různé taktiky, jako je obcházení hráče a koordinované útoky. Kromě boje by měli zvládat i úkoly, jako je interakce s prostředím nebo pomáhat hráčovi dosáhnout cíle. Pokud hra obsahuje i příběhovou stránku, tak by měla AI umět mimikovat emoce, aby uměla vyjadřovat řadu pocitů, aby se hráč dokázal například i do například své postavy i vcítit.
 
 \subsubsection{F.E.A.R.}
 Hra F.E.A.R.\cite{DD1}\cite{DD2}, zkratka pro First Encounter Assault Recon, debutovala v roce 2005 jako střílečka z pohledu první osoby vyvinutá společností Monolith Productions. Navzdory svému stáří je stále chválena jako ukázkový příklad implementace umělé inteligence v bojových videohrách. Klíč k jejímu trvalému úspěchu spočívá v kombinaci inovativních technik umělé inteligence a strategického herního designu.
 
 Jako první do hry implementovali techniku umělé inteligence zvanou automatizované plánování. Tento přístup, inspirovaný systémem STRIPS\cite{FikesWinter1971} vyvinutým v roce 1971 pro programování robotů, umožňuje nehráčským postavám (NPC) zapojit se do sofistikovaných rozhodovacích procesů v herním prostředí. Konkrétně jsou NPC vybaveny schopností plánovat svůj pohyb, vybírat krytí a rozhodovat o bojových akcích, jako je střelba nebo použití granátu. Tato integrace automatizovaného plánování zahrnuje přiřazení konkrétních cílů každé NPC a modelování možných akcí, které mají v herním světě k dispozici. Analýzou těchto možností mohou NPC vytvářet optimalizované plány pro efektivní dosažení svých cílů.
-
-\newpage
 
 Každá akce umělé inteligence ve F.E.A.R. se řídí předpoklady a účinky. Předpoklady představují podmínky, které jsou ve světě hry nezbytné pro provedení akce, zatímco účinky označují výsledky vyplývající z provedení akce. Například, pokud je postava pozorována, jak běží k objektu a sráží jej na zem, aby jej použila jako úkryt, znamená to sekvenci plánovaných akcí: pohyb, manipulace s objektem a nakonec hledání úkrytu. To znamená, že před zahájením sekvence akcí je třeba zajistit, aby byl objekt vzpřímený, dosažitelný a schopný poskytnout úkryt. Dodržování předpokladů zabraňuje nelogickým akcím, jako je pokus o manipulaci s objektem, který je již převrácený, nebo pohyb k nedosažitelnému objektu, čímž se zvyšuje realističnost NPC ve hře.
 
@@ -141,7 +139,25 @@ Kromě plánovacích funkcí využívá systém F.E.A.R. ke koordinaci provádě
 
 Dalším aspektem designu umělé inteligence ve hře, kterou vývojáři implementovali, je kdy využít umělou inteligenci k dosažení požadovaných výsledků a kdy použít důmyslná řešení a úpravy. Například zatímco jednotliví vojáci ve hře F.E.A.R. nemají povědomí o existenci ostatních vojáků, hra vytváří iluzi týmové spolupráce pomocí chytré manipulace. Přidělením samostatných cílů různým postavám, jejichž kombinace simuluje spolupráci, hra naaranžuje scénáře, v nichž například jedna postava poskytuje krycí palbu, zatímco druhá se postaví do boku hráče, aby ho mohli jednodušeji zneškodnit. Ačkoli jsou tyto akce prováděny nezávisle na sobě, jejich synchronizace vytváří dojem koordinovaného manévru. Pro posílení této iluze hra obsahuje dialogové náznaky mezi postavami, přestože se navzájem neslyší a neodpovídají si, což přidává další vrstvu realismu a umocňuje hráčův dojem, že čelí dobře koordinovanému nepřátelskému týmu.
 
-\subsubsection{Middle Earth: Shadow of War}
+\newpage
 
+\subsubsection{Middle Earth: Shadow of Mordor a Middle Earth: Shadow of War}
+Systém Nemesis\cite{GMT2021}, představený ve hře Middle-Earth: 
+Shadow of Mordor v roce 2014, zůstává pozoruhodným herním AI systémem. V podstatě funguje jako dynamický generátor padouchů, který vytváří unikátní protivníky s odlišnými vlastnostmi, osobnostmi a rysy. Tito protivníci hráče zaujmou posměšnými průpovídkami a přispívají k příběhu, který se vyvíjí na základě interakcí s hráčem.
+
+V Middle-Earth: Shadow of War je systém Nemesis nadále rozšířen oproti svému předchůdci. Nejenže generuje padouchy, ale také spřádá složité příběhy založené na vztazích hráče s těmito orky. Tento systém důmyslně využívá základní hráčské akce, jako je boj, útěk nebo shromažďování informací, jako stavební kameny příběhu a vytváří tak dynamický příběhový zážitek v rámci akční hry v reálném čase.
+
+Klíčem k úspěchu v systému Nemesis je vytvoření zapamatovatelných postav se silnou osobností a jedinečnými vlastnostmi. Díky dialogům, jako jsou například urážky mířené na hráčskou postavu nebo zpívání, ale i díky vizuálním podnětům se každý ork stává osobitým a zapamatovatelným.
+
+\begin{figure}[ht]
+\includegraphics[scale=0.50]{1-5.png}
+\centering
+\caption{Příklad pevnosti ve hře Shadow of War. Každý ork je unikátní jak vzhledově i chováním. Orkové s modrou lebkou jsou na straně hráče, všichni ostatní jsou nepřátelé. Tento obrázek ukazuje i hiearchii orků, kde ork na nejvyšší pozici je \uv{Overlord}, prostřední pozice je \uv{Warchief} a orkové před hradbami jsou kapitáni, ale také jsou ve hře orkové, co nemají žádné postavení a jsou to buďto vojáci nebo otroci \cite{Parkin2017}}
+\label{obrME}
+\end{figure}
+
+Jeho genialita také spočívá v jeho schopnosti prodloužit tyto příběhy za hranice jednotlivých střetnutí a nabídnout alternativní výsledky, jako je ústup, zrada nebo dokonce vzkříšení poražených orků. To zajišťuje, že příběhy přetrvávají a vyvíjejí se na základě akcí a rozhodnutí hráče. Mezi dalšími rozšířeními těchto příběhů jsou vzácné události, jako je zrada nebo proměna. 
+
+Pro podporu těchto vyvíjejících se příběhů hra také obsahuje hiearchii v této orkské společnosti, která umožňuje povyšování, degradování a posuny moci mezi orkama. Navíc se tento systém dynamicky přizpůsobuje na základě výkonu hráčů a přináší výzvy nebo příležitosti k udržení příběhového napětí. Systém Nemesis nakonec prosperuje na základě zapojení a interpretace hráčů, což umožňuje vznik nových příběhů utvářených na základě individuálních zkušeností.
 
 \section{Strojové učení}

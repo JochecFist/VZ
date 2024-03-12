@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  28 FEB 2024 09:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  12 MAR 2024 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,25 +641,41 @@ Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-3.png  used on input line 98.
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.109 \newpage
-               <./Kapitoly/1/Obrazky//1-3.png>] [18]
-<./Kapitoly/1/Obrazky//1-4.png, id=213, 634.37pt x 545.03625pt>
+               <./Kapitoly/1/Obrazky//1-3.png>]
+Underfull \vbox (badness 6110) has occurred while \output is active []
+
+ [18]
+<./Kapitoly/1/Obrazky//1-4.png, id=210, 634.37pt x 545.03625pt>
 File: ./Kapitoly/1/Obrazky//1-4.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-4.png>
-Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-4.png  used on input line 131.
+Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-4.png  used on input line 132.
 
 (pdftex.def)             Requested size: 399.65521pt x 343.37466pt.
- [19pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
-4}) has been already used, duplicate ignored
+
+[19] [20pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.137 \newpage
-               <./Kapitoly/1/Obrazky//1-4.png>]) [20]
+l.142 \newpage
+               <./Kapitoly/1/Obrazky//1-4.png>]
+<./Kapitoly/1/Obrazky//1-5.png, id=229, 843.15pt x 474.27188pt>
+File: ./Kapitoly/1/Obrazky//1-5.png Graphic file (type png)
+<use ./Kapitoly/1/Obrazky//1-5.png>
+Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-5.png  used on input line 153.
+
+(pdftex.def)             Requested size: 421.57396pt x 237.13536pt.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.162 
+       <./Kapitoly/1/Obrazky//1-5.png>]) [22]
 Kapitola 2.
-(./Kapitoly/2/2.tex) [21
+(./Kapitoly/2/2.tex) [23
 
-] [22
+] [24
 
-] (./Kapitoly/Zaver/Zaver.tex) [23] [24
+] (./Kapitoly/Zaver/Zaver.tex) [25] [26
 
 
 ]
@@ -711,7 +727,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 780429055058-[]6 /
  []
 
-[25]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 []$\T1/cmtt/m/n/12 https : / / en . wikipedia . org / w / index . php ? title =
  Tree _ traversal & oldid =
@@ -729,16 +745,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 ]smart-[]ai-[]part-[]ii /
  []
 
-) [26] (./Strojové učení pro adaptaci autonomních agentů.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+[]\T1/cmr/m/n/12 PARKIN, Je-ffrey. \T1/cmr/m/it/12 Middle-earth: Sha-dow of War
+ gu-ide: The Ne-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+\T1/cmr/m/it/12 me-sis Sys-tem\T1/cmr/m/n/12 . On-line. In: Po-ly-gon. C2024. D
+o-stupn� z: []$\T1/cmtt/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+\T1/cmtt/m/n/12 / / www . polygon . com / middle-[]earth-[]shadow-[]of-[]war-[]
+guide / 2017 / 10 / 9 /
+ []
+
+) [28] (./Strojové učení pro adaptaci autonomních agentů.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `"Strojové učení pro adaptaci autonomních
  agentů".out' has not changed.
-(rerunfilecheck)             Checksum: FB46727ACB33E42259E4AE751AE53EA9;1873.
+(rerunfilecheck)             Checksum: 3FAF628FF5B5202AF4A6980B07327587;1873.
  ) 
 Here is how much of TeX's memory you used:
- 13233 strings out of 480437
- 196907 string characters out of 5898174
- 532204 words of memory out of 5000000
- 30588 multiletter control sequences out of 15000+600000
+ 13250 strings out of 480437
+ 197228 string characters out of 5898174
+ 532758 words of memory out of 5000000
+ 30598 multiletter control sequences out of 15000+600000
  416484 words of font info for 56 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
  72i,17n,80p,1269b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -754,11 +791,11 @@ rograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/Pr
 ograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/Pro
 grams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/Prog
 rams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "Strojové učení pro adaptaci autonomních agentů.pdf" (26
- pages, 546253 bytes).
+Output written on "Strojové učení pro adaptaci autonomních agentů.pdf" (28
+ pages, 1486997 bytes).
 PDF statistics:
- 353 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 73 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 305 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
