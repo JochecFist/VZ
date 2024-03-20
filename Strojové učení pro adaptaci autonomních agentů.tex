@@ -19,10 +19,10 @@
 %\usepackage{encxvlna} % postará se o spojky a předložky, které dle českých pravidel nesmí být na konci řádku. Dokumentace: http://texdoc.net/texmf-dist/doc/generic/encxvlna/encxvlna.pdf (chová se správně k "vnitřku" listings?)
 
 \usepackage{graphicx} % balíček pro vkládání rastrových grafických souborů (PNG apod.)
-%\usepackage{epsfig} % balíčky pro vkládání grafických souborů typu EPS
+%\usepackage{epsfig} % balíčky pro vkládání grafických souborů typu EPSs
 \usepackage{float} % rozšířené možnosti umístění obrázků
 
-\graphicspath{{./Kapitoly/1/Obrazky/} {./Kapitoly/2/Obrazky/}}
+\graphicspath{{./Kapitoly/1/Obrazky/} {./Kapitoly/2/Obrazky/} {./Kapitoly/3/Obrazky/} {./Kapitoly/4/Obrazky/}}
 
 %\usepackage{caption} % pro popisky obrázků, tabulek atd.
 
@@ -253,13 +253,21 @@ V~\kde\ dne .................... &........................................ \\	% 
 
 \input{./Kapitoly/Uvod/Uvod.tex}
 
-\chapter{AI ve hrách a Teorie o strojovém učení}
+\chapter{AI ve hrách}
 
 \input{./Kapitoly/1/1.tex}
 
-\chapter{Návrh adaptace agenta a jeho hodnocení}
+\chapter{Strojové učení (Machine Learning - ML)}
 
 \input{./Kapitoly/2/2.tex}
+
+\chapter{Návrh agenta}
+
+\input{./Kapitoly/3/3.tex}
+
+\chapter{Návrh hodnocení agenta}
+
+\input{./Kapitoly/4/4.tex}
 
 \chapter*{Závěr} % SEM NESAHEJTE!
 \addcontentsline{toc}{chapter}{Závěr} % SEM NESAHEJTE!

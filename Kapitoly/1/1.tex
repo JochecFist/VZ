@@ -1,5 +1,4 @@
-\section{AI ve hrách}
-\subsection{Historie}
+\section{Historie}
 Prolínání her a umělé inteligence (AI) je dlouhodobě zkoumanou oblastí. Velká pozornost ve výzkumu AI týkající se her se zaměřuje na vývoj agentů schopných zapojit se do hry, ať už s integrací strojového učení, nebo bez ní. Tato cesta zkoumání historicky představovala primární a často jediný přístup k využití umělé inteligence v herním kontextu.
 
 Ještě před formalizací umělé inteligence jako samostatného oboru se průkopníci počítačové vědy snažili prozkoumat možnosti výpočetní techniky tím, že navrhovali programy schopné hrát stolní hry. Mezi těmito prvními snahami je práce Alana Turinga, který je obecně považován za zásadní postavu počítačové vědy a který upravil algoritmus Minimax pro hraní šachů.
@@ -24,10 +23,10 @@ V poslední době však došlo k prudkému nárůstu výzkumu zaměřeného na v
 
 Jednou z cest zkoumání je vytváření agentů schopných projít herním testem, který se jmenuje Turing test\cite{OGDD2021}. Tento test, odvozený od klasického Turingova testu, vyžaduje, aby porota přesně rozeznala, zda pozorované herní chování pochází od lidského hráče nebo od herního bota řízeného umělou inteligencí. V roce 2012 se dva boty řízené umělou inteligencí ve hře Unreal Tournament 2004 od Epic Games úspěšně prokázaly schopnost projít herním Turingovým testem, což svědčí o jejich schopnosti replikovat herní chování podobné lidskému.
 
-\subsection{\uv{Chování pro tento případ} neboli Ad-Hoc Behavior}
+\section{\uv{Chování pro tento případ} neboli Ad-Hoc Behavior}
 V oblasti vývoje her je již dlouho známé tzv. \uv{Ad-Hoc Behavior}, jako jsou konečné stavové stroje, stromy chování a umělá inteligence založená na užitku. Tyto metody tradičně umožňují značnou kontrolu nad nehráčskými postavami (NPC). O jejich trvalé převaze svědčí i to, že se s jejich používáním v komunitě vývojářů her stále spojuje termín "herní umělá inteligence".
 
-\subsubsection{Konečný automat (Finite State Machines)}
+\subsection{Konečný automat (Finite State Machines)}
 Až do poloviny 20. století byl dominantní metodou pro ovládání a rozhodování nehráčských postav (NPC) ve hrách konečný automat(Finite State Machines, KA)\cite{Gill207} a jeho varianty, například hierarchické KA. Tyto techniky měly v oblasti herní umělé inteligence převahu a prokázaly svou účinnost při řízení chování NPC v herním prostředí.
 
 Konečné automaty spadají do oblasti expertních znalostních systémů a běžně se vizualizují jako grafy. Tyto grafy slouží jako abstraktní reprezentace vzájemně propojených prvků, jako jsou objekty, symboly, události, akce nebo vlastnosti relevantní pro konkrétní kontext návrhu. V rámci této reprezentace uzly odpovídají stavům, z nichž každý je charakterizován matematickou abstrakcí, zatímco hrany označují přechody, které znamenají podmíněné vztahy mezi stavy. KA fungují tak, že v daném okamžiku může být aktivní pouze jeden stav, přičemž k přechodům dochází na základě splnění předem definovaných podmínek. V podstatě jsou charakterizovány třemi základními prvky:
@@ -54,7 +53,7 @@ Konečné automaty nabízejí pozoruhodné výhody díky své jednoduchosti při
 \label{obrKASnake}
 \end{figure}
 
-\subsubsection{Stromy chování (Behavior Trees)}
+\subsection{Stromy chování (Behavior Trees)}
 Strom chování (Behavior Tree, SC)\cite{Colledanchise2018} funguje jako expertní znalostní systém, podobně jako konečný automat (Finite State Machine, KA), který usnadňuje přechody mezi konečnou množinou úloh nebo chování. Významná výhoda SC oproti KA spočívá v jejich modulární struktuře, která umožňuje skládání složitých chování z jednodušších úloh. Na rozdíl od KA, které představují především stavy, jsou SC strukturovány kolem chování, čímž se odlišují od hierarchických KA. Podobně jako KA nabízejí SC snadný návrh, testování a ladění, což přispělo k jejich širokému rozšíření při vývoji her po úspěšných implementacích v titulech, jako je Halo 2\cite{Isla2005} a Bioshock.
 
 Využívají hierarchickou stromovou strukturu, která se skládá z kořenového uzlu, nadřazených uzlů a jim odpovídajících podřízených uzlů, z nichž každý představuje specifické chování (viz obrázek \ref{obrSCLogika}). Procházení SC začíná od kořene a aktivuje provádění dvojic rodič-dítě, jak je ve stromu naznačeno. Během předem stanovených časových kroků může podřízený uzel vrátit svému rodiči jednu z následujících hodnot: "běží", pokud chování zůstává aktivní, "úspěch" při úspěšném dokončení nebo "selhání", pokud chování selže. SC se skládají ze tří základních typů uzlů: sekvence, selektor a dekorátor, z nichž každý plní odlišné funkce, které jsou podrobněji popsány níže:
@@ -83,7 +82,7 @@ Ve srovnání s KA nabízejí větší flexibilitu při navrhování a jsou rela
 \label{obrSCLogika}
 \end{figure}
 
-\subsubsection{\uv{Umělá inteligence založená na užitečnosti} neboli Utility System AI}
+\subsection{\uv{AI založená na užitečnosti} neboli Utility System AI}
 V odvětví herní umělé inteligence je veliká absence modularity chování v různých hrách a představuje významnou překážku pro dosažení vysoce kvalitní umělé inteligence. K překonání omezení KA a SC v tomto ohledu je stále oblíbenějším přístupem umělá inteligence založená na užitečnosti (Utility System AI, USAI)\cite{Graham2019}. Tato metoda nabízí prostředky pro efektivnější návrh řídicích a rozhodovacích systémů ve hrách. V USAI je ke každé herní instanci přiřazena funkce užitku, která kvantifikuje její důležitost v kontextu hry. Tyto funkce mohou například hodnotit faktory, jako je blízkost nepřítele nebo zdravotní stav agenta. Na základě zvážení všech dostupných užitných hodnot a potenciálních akcí určí umělá inteligence nejzásadnější možnost, kterou je třeba v daném okamžiku upřednostnit. Tento přístup vychází z principů teorie užitku z ekonomie a zahrnuje návrh funkcí užitku, podobně jako vytváření funkcí příslušnosti v teorii fuzzy množin.
 
 Užitky zahrnují široké spektrum ukazatelů, od objektivních údajů, jako je zdraví nepřítele, až po subjektivní faktory, jako jsou emoce a vnímané hrozby. Tyto různorodé metriky spojené s potenciálními akcemi nebo rozhodnutími lze sloučit do lineárních nebo nelineárních vzorců, které slouží k vedení agentů při rozhodování na základě souhrnného skóre užitečnosti. Na rozdíl od sekvenčních rozhodovacích procesů KA a SC umožňuje USAI současné vyhodnocení všech dostupných možností. Přiřazením užitku každé možnosti a výběrem té s nejvyšším užitkem mohou agenti určit nejvhodnější postup. Tyto hodnoty užitku podléhají pravidelnému přehodnocování, například přepočty probíhající v předem stanovených intervalech během hry, aby se zajistilo sladění s dynamickým stavem hry.
@@ -102,24 +101,24 @@ funkce, která leží mezi 0 a 1 a je založena na aktuální pozici duchů. Pac
 \label{obrUSAI}
 \end{figure}
 
-\subsection{Příklady dalších metod}
-\subsubsection{Procházení stromu}
+\section{Příklady dalších metod}
+\subsection{Procházení stromu}
 Procházení stromem\cite{WikiTS} je základní úlohou v teorii algoritmizace a zahrnuje systematické zkoumání všech uzlů v rámci datové stromové struktury. Vzhledem k analogii stromu s grafem je procházení stromů úzce spjato s teorií grafů. Metody procházení stromů se běžně demonstrují na binárních stromech, ale lze je snadno rozšířit i na jiné stromové struktury. Dva základní přístupy, prohledávání do hloubky (DFS) a prohledávání do šířky (BFS), se liší pořadím návštěv uzlů a použitím pomocných datových struktur. DFS, často rekurzivní, obvykle využívá zásobník, a to buď explicitně, nebo implicitně prostřednictvím použití zásobníku volání. Naproti tomu BFS typicky využívá frontu. 
 
 \newpage
 
 Ve scénářích, kde je cílem cílené vyhledávání hodnot spíše než úplné procházení stromu, umožňují specializované konstrukční techniky, jako je vytváření vyhledávacího stromu (typicky binárního vyhledávacího stromu), efektivní použití přizpůsobených variant algoritmů. Další specializované algoritmy jsou použitelné v problémech prohledávání stavového prostoru, které lze reprezentovat jako stromy. Pozoruhodné je, že heuristické algoritmy, včetně stromového vyhledávání Monte Carlo odvozeného z metody Monte Carlo, našly úspěch v aplikacích umělé inteligence v rámci počítačových her.
 
-\subsubsection{Evoluční algoritmy}
+\subsection{Evoluční algoritmy}
 Evoluční algoritmy (EA)\cite{Yu2010} jsou podmnožinou evolučních výpočtů a představují metaheuristické optimalizační algoritmy založené na populaci. Tyto algoritmy čerpají inspiraci z biologické evoluce a využívají mechanismy, jako je reprodukce, mutace, rekombinace a selekce. V EA představují kandidáti na řešení optimalizačních problémů jedince v populaci, jejichž kvalita se hodnotí pomocí fitness funkce. Iterativním použitím těchto operátorů se populace vyvíjí. Výpočetní složitost, zejména spojená s vyhodnocováním fitness funkcí, často představuje v reálných implementacích EA značnou výzvu. K řešení tohoto problému se používají metody, jako je aproximace fitness. Navzdory své zdánlivé jednoduchosti vykazují EA účinnost při řešení složitých problémů, což naznačuje, že složitost algoritmu nemusí vždy přímo korelovat se složitostí problému.
 
-\subsection{AI ve 3D akčních hrách}
+\section{AI ve 3D akčních hrách}
 V této subsekci je základní popis úkolů AI v 3D akčních hrách a také příklady existujících 3D akčních her a jak bylo jejich AI vytvořeno.
 
-\subsubsection{Obecné úkoly AI}
+\subsection{Obecné úkoly AI}
 V 3D akčních hrách by umělá inteligence měla umět pohybovat se virtuálním světem, takže například ovládat základní pohyby po mapě ale také pokročilé strategie jako například vylézt po zdi nebo skrčit se a tak dále. Klíčové jsou také poznávací schopnosti a přizpůsobivost, neboli například dokázat předvídat hráčovi interakce s objekty nebo se samotnou umělou inteligencí. AI by mělo také vynikat v boji a používat různé taktiky, jako je obcházení hráče a koordinované útoky. Kromě boje by měli zvládat i úkoly, jako je interakce s prostředím nebo pomáhat hráčovi dosáhnout cíle. Pokud hra obsahuje i příběhovou stránku, tak by měla AI umět mimikovat emoce, aby uměla vyjadřovat řadu pocitů, aby se hráč dokázal například i do například své postavy i vcítit.
 
-\subsubsection{F.E.A.R.}
+\subsection{F.E.A.R.}
 Hra F.E.A.R.\cite{DD1}\cite{DD2}, zkratka pro First Encounter Assault Recon, debutovala v roce 2005 jako střílečka z pohledu první osoby vyvinutá společností Monolith Productions. Navzdory svému stáří je stále chválena jako ukázkový příklad implementace umělé inteligence v bojových videohrách. Klíč k jejímu trvalému úspěchu spočívá v kombinaci inovativních technik umělé inteligence a strategického herního designu.
 
 Jako první do hry implementovali techniku umělé inteligence zvanou automatizované plánování. Tento přístup, inspirovaný systémem STRIPS\cite{FikesWinter1971} vyvinutým v roce 1971 pro programování robotů, umožňuje nehráčským postavám (NPC) zapojit se do sofistikovaných rozhodovacích procesů v herním prostředí. Konkrétně jsou NPC vybaveny schopností plánovat svůj pohyb, vybírat krytí a rozhodovat o bojových akcích, jako je střelba nebo použití granátu. Tato integrace automatizovaného plánování zahrnuje přiřazení konkrétních cílů každé NPC a modelování možných akcí, které mají v herním světě k dispozici. Analýzou těchto možností mohou NPC vytvářet optimalizované plány pro efektivní dosažení svých cílů.
@@ -141,7 +140,7 @@ Dalším aspektem designu umělé inteligence ve hře, kterou vývojáři implem
 
 \newpage
 
-\subsubsection{Middle Earth: Shadow of Mordor a Middle Earth: Shadow of War}
+\subsection{ME: Shadow of Mordor a ME: Shadow of War}
 Systém Nemesis\cite{GMT2021}, představený ve hře Middle-Earth: 
 Shadow of Mordor v roce 2014, zůstává pozoruhodným herním AI systémem. V podstatě funguje jako dynamický generátor padouchů, který vytváří unikátní protivníky s odlišnými vlastnostmi, osobnostmi a rysy. Tito protivníci hráče zaujmou posměšnými průpovídkami a přispívají k příběhu, který se vyvíjí na základě interakcí s hráčem.
 
@@ -159,19 +158,3 @@ Klíčem k úspěchu v systému Nemesis je vytvoření zapamatovatelných postav
 Genialita tohoto systému také spočívá v jeho schopnosti prodloužit tyto příběhy za hranice jednotlivých střetnutí a nabídnout alternativní výsledky, jako je ústup, zrada nebo dokonce vzkříšení poražených orků. To zajišťuje, že příběhy přetrvávají a vyvíjejí se na základě akcí a rozhodnutí hráče. Mezi dalšími rozšířeními těchto příběhů jsou vzácné události, jako je zrada nebo proměna. 
 
 Pro podporu těchto vyvíjejících se příběhů hra také obsahuje hiearchii v orkské společnosti, která umožňuje povyšování, degradování a posuny moci mezi orkama. Navíc se tento systém dynamicky přizpůsobuje na základě výkonu hráče a přináší výzvy nebo příležitosti k udržení příběhového napětí. Systém Nemesis nakonec prosperuje na základě zapojení a interpretace hráče, což umožňuje vznik nových příběhů utvářených na základě individuálních zkušeností.
-
-\section{Strojové učení (Machine Learning - ML)}
-\subsection{Základy o strojovém učení}
-TBA\texttrademark
-
-\subsection{\uv{Učení s učitelem} neboli Supervised ML}
-TBA\texttrademark
-
-\subsection{\uv{Učení bez učitele} neboli Unsupervised ML}
-TBA\texttrademark
-
-\subsection{\uv{Částečně řízené učení} neboli Semi-Supervised ML}
-TBA\texttrademark
-
-\subsection{\uv{Zpětnovazebné učení} neboli Reinforcement Learning}
-TBA\texttrademark
