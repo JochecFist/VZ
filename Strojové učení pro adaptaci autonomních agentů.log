@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  20 MAR 2024 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  20 MAR 2024 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,144 +593,140 @@ Overfull \hbox (27.72pt too wide) in paragraph at lines 217--236
 
 ]
 Kapitola 1.
-(./Kapitoly/1/1.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
+(./Kapitoly/1/1.tex [11] [12] [13]
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 26.
+(hyperref)                removing `\clqq' on input line 32.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 26.
+(hyperref)                removing `\crqq' on input line 32.
 
-[13]
-<./Kapitoly/1/Obrazky//1-1.png, id=227, 352.31625pt x 302.12875pt>
+[14]
+<./Kapitoly/1/Obrazky//1-1.png, id=231, 352.31625pt x 302.12875pt>
 File: ./Kapitoly/1/Obrazky//1-1.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-1.png>
-Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-1.png  used on input line 50.
-(pdftex.def)             Requested size: 352.31538pt x 302.128pt.
- [14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-1.png  used on input line 60.
+(pdftex.def)             Requested size: 281.85338pt x 241.70332pt.
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.60 \begin{enumerate}
-                       <./Kapitoly/1/Obrazky//1-1.png>] [15]
-<./Kapitoly/1/Obrazky//1-2.png, id=251, 603.25375pt x 299.1175pt>
+l.66 \newpage
+              <./Kapitoly/1/Obrazky//1-1.png>] [16]
+<./Kapitoly/1/Obrazky//1-2.png, id=255, 603.25375pt x 299.1175pt>
 File: ./Kapitoly/1/Obrazky//1-2.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-2.png>
-Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-2.png  used on input line 79.
+Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-2.png  used on input line 92.
 (pdftex.def)             Requested size: 404.17792pt x 200.40767pt.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 85.
+(hyperref)                removing `\clqq' on input line 98.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 85.
+(hyperref)                removing `\crqq' on input line 98.
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.92 \newpage
-              <./Kapitoly/1/Obrazky//1-2.png>]
-<./Kapitoly/1/Obrazky//1-3.png, id=260, 631.35875pt x 367.3725pt>
+l.103 \newpage
+               <./Kapitoly/1/Obrazky//1-2.png>]
+<./Kapitoly/1/Obrazky//1-3.png, id=264, 631.35875pt x 367.3725pt>
 File: ./Kapitoly/1/Obrazky//1-3.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-3.png>
-Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-3.png  used on input line 97.
+Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-3.png  used on input line 112.
+
 (pdftex.def)             Requested size: 423.00816pt x 246.13828pt.
- [17pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.108 \newpage
-               <./Kapitoly/1/Obrazky//1-3.png>]
-Underfull \vbox (badness 2846) has occurred while \output is active []
-
- [18]
-<./Kapitoly/1/Obrazky//1-4.png, id=279, 634.37pt x 545.03625pt>
+l.119 \newpage
+               <./Kapitoly/1/Obrazky//1-3.png>] [19] [20]
+<./Kapitoly/1/Obrazky//1-4.png, id=291, 634.37pt x 545.03625pt>
 File: ./Kapitoly/1/Obrazky//1-4.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-4.png>
-Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-4.png  used on input line 131.
+Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-4.png  used on input line 148.
 
-(pdftex.def)             Requested size: 399.65521pt x 343.37466pt.
+(pdftex.def)             Requested size: 367.93484pt x 316.12125pt.
 
-[19] [20pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.1.4}) has been already used, duplicate ignored
+Underfull \vbox (badness 2608) has occurred while \output is active []
+
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.141 \newpage
-               <./Kapitoly/1/Obrazky//1-4.png>]
-<./Kapitoly/1/Obrazky//1-5.png, id=297, 843.15pt x 474.27188pt>
+l.159 
+       <./Kapitoly/1/Obrazky//1-4.png>]
+<./Kapitoly/1/Obrazky//1-5.png, id=301, 843.15pt x 474.27188pt>
 File: ./Kapitoly/1/Obrazky//1-5.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-5.png>
-Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-5.png  used on input line 152.
+Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-5.png  used on input line 165.
 
 (pdftex.def)             Requested size: 421.57396pt x 237.13536pt.
-) [21pdfTeX warning (ext4): destination with the same identifier (name{figure.1
-.5}) has been already used, duplicate ignored
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.259 
-       <./Kapitoly/1/Obrazky//1-5.png>] [22]
+l.171 \newpage
+               <./Kapitoly/1/Obrazky//1-5.png>]) [23] [24
+
+]
 Kapitola 2.
-(./Kapitoly/2/2.tex
+(./Kapitoly/2/2.tex [25]
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 4.
-
-
-Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 4.
+(hyperref)                removing `\clqq' on input line 6.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 7.
+(hyperref)                removing `\crqq' on input line 6.
+
+[26]
+
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\clqq' on input line 11.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 7.
+(hyperref)                removing `\crqq' on input line 11.
+
+[27]
+
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\clqq' on input line 16.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 10.
+(hyperref)                removing `\crqq' on input line 16.
 
-
-Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 10.
-
-
-Overfull \hbox (25.214pt too wide) in paragraph at lines 13--13
+[28]
+Overfull \hbox (25.214pt too wide) in paragraph at lines 21--21
 []\T1/cmr/bx/n/17.28 ^^RZp�tnovazebn� u�en�^^P ne-boli Re-in-for-ce-ment Lear-
  []
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 13.
+(hyperref)                removing `\clqq' on input line 21.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 13.
+(hyperref)                removing `\crqq' on input line 21.
 
-) [23
-
-] [24
+) [29] [30
 
 ]
 Kapitola 3.
-(./Kapitoly/3/3.tex) [25] [26
-
-]
+(./Kapitoly/3/3.tex [31]) [32]
 Kapitola 4.
-(./Kapitoly/4/4.tex) [27] [28
+(./Kapitoly/4/4.tex) [33
 
-] (./Kapitoly/Zaver/Zaver.tex) [29] [30
+] [34
+
+] (./Kapitoly/Zaver/Zaver.tex) [35] [36
 
 
 ]
@@ -782,7 +778,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 780429055058-[]6 /
  []
 
-[31]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 []$\T1/cmtt/m/n/12 https : / / en . wikipedia . org / w / index . php ? title =
  Tree _ traversal & oldid =
@@ -818,16 +814,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 guide / 2017 / 10 / 9 /
  []
 
-) [32] (./Strojové učení pro adaptaci autonomních agentů.aux)
+) [38] (./Strojové učení pro adaptaci autonomních agentů.aux)
 Package rerunfilecheck Info: File `"Strojové učení pro adaptaci autonomních
  agentů".out' has not changed.
 (rerunfilecheck)             Checksum: F8B2F3A305F68C584E0138A021574738;5062.
  ) 
 Here is how much of TeX's memory you used:
- 13289 strings out of 480437
- 197776 string characters out of 5898174
- 532817 words of memory out of 5000000
- 30618 multiletter control sequences out of 15000+600000
+ 13279 strings out of 480437
+ 197614 string characters out of 5898174
+ 533817 words of memory out of 5000000
+ 30602 multiletter control sequences out of 15000+600000
  416484 words of font info for 56 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
  72i,17n,80p,1269b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -843,11 +839,11 @@ rograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/Pr
 ograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/Pro
 grams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/Prog
 rams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "Strojové učení pro adaptaci autonomních agentů.pdf" (32
- pages, 1500136 bytes).
+Output written on "Strojové učení pro adaptaci autonomních agentů.pdf" (38
+ pages, 1501809 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 386 compressed objects within 4 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 408 compressed objects within 5 object streams
+ 96 named destinations out of 1000 (max. 500000)
  259 words of extra memory for PDF output out of 10000 (max. 10000000)
 
