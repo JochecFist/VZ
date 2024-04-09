@@ -14,11 +14,11 @@
 \contentsline {subsection}{\numberline {1.4.2}F.E.A.R.}{20}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}ME: Shadow of Mordor a ME: Shadow of War}{22}{subsection.1.4.3}%
 \contentsline {chapter}{\numberline {2}Strojové učení (Machine Learning - ML)}{25}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Základy ML}{25}{section.2.1}%
-\contentsline {section}{\numberline {2.2}\uv {Učení s učitelem} neboli Supervised ML}{26}{section.2.2}%
-\contentsline {section}{\numberline {2.3}\uv {Učení bez učitele} neboli Unsupervised ML}{27}{section.2.3}%
-\contentsline {section}{\numberline {2.4}\uv {Částečně řízené učení} neboli Semi-Supervised ML}{28}{section.2.4}%
-\contentsline {section}{\numberline {2.5}\uv {Zpětnovazebné učení} neboli Reinforcement Learning}{29}{section.2.5}%
+\contentsline {section}{\numberline {2.1}Supervised Machine Learning}{26}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Artificial Neural Networks}{27}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}\uv {Učení bez učitele} neboli Unsupervised ML}{28}{section.2.2}%
+\contentsline {section}{\numberline {2.3}\uv {Částečně řízené učení} neboli Semi-Supervised ML}{29}{section.2.3}%
+\contentsline {section}{\numberline {2.4}\uv {Zpětnovazebné učení} neboli Reinforcement Learning}{30}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Návrh autonomního agenta}{31}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Prostředí pro agenta}{31}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Algoritmy pro učení agenta}{32}{section.3.2}%

@@ -1,10 +1,56 @@
-\section{Základy ML}
-TBA\texttrademark
+Strojové učení, jedna z hlavních součástí umělé inteligence, se zabývá vývojem modelů a algoritmů, které umožňují počítačům autonomně se učit z dat a iterativně zvyšovat svůj výkon na základě předchozích zkušeností, a to bez explicitního programování pro každou úlohu. 
+
+Zjednodušeně řečeno, strojové učení zahrnuje trénink systémů, které simulují kognitivní procesy podobné lidským, a to prostřednictvím přijímání a analýzy dat. Tato metodika tréninku zahrnuje neustálé zdokonalování prostřednictvím vystavení historickým datům, což vede k opakovanému zlepšování výkonu systému v průběhu času.
+
+Použití strojového učení je zvláště významné v oblastech, kde existuje obrovské množství dat, která vyžadují pomoc při předvídání, což pomáhá při dosahování rychlosti a přesnosti. Tato schopnost usnadňuje práci a ukazuje tak transformační potenciál strojového učení v současných technologických ekosystémech.
+
+Existuje několik typů strojového učení, přičemž každý z nich má zvláštní vlastnosti a aplikace:
+\begin{enumerate}
+	\item Supervised Machine Learning (\uv{Učení s učitelem})
+	\item Unsupervised Machine Learning (\uv{Učení bez učitele})
+	\item Semi-Supervised Machine Learning (\uv{Částečně řízené učení})		
+	\item Reinforcement Learning (\uv{Zpětnovazebné učení})
+\end{enumerate}
 
 \newpage
 
-\section{\uv{Učení s učitelem} neboli Supervised ML}
-TBA\texttrademark
+\section{Supervised Machine Learning}
+\uv{Učení s učitelem} neboli Supervised Machine Learning(SML)\cite{Russellc1995} představuje algoritmický proces zaměřený na aproximaci základní funkce, která spojuje označená data s jejich odpovídajícími atributy nebo rysy. Tento metodický přístup je založen na využití označených příkladů k rozpoznání složitých vztahů v rámci souborů dat.
+
+Vezměme si typický příklad zahrnující stroj, který má za úkol rozlišovat mezi jablky a hruškami na základě specifikovaných vlastností, jako je např. barva a velikost. Prostřednictvím vystavení mnoha označeným vzorkům ovoce - z nichž každý obsahuje odlišné kombinace barvy a velikosti spolu s odpovídajícími označeními (jablko nebo hruška) - prochází stroj fází učení, aby zvládl tento klasifikační úkol. Po dokončení procesu učení stroj usiluje o to, aby dokázal určit kategorii (jablko nebo hruška) nového, dosud neviděného ovoce výhradně na základě pozorovaných atributů barvy a velikosti.
+
+SML je zásadně závislý na přizpůsobeném souboru dat s označenými trénovacími příklady, což je vlastnost, která definuje jeho povahu pod dohledem. Konkrétně toto paradigma učení funguje tak, že dostává tréninkový signál v podobě kontrolovaných značek aplikovaných na datové instance, které jsou charakterizovány odpovídajícími rysy.
+
+Každá datová instance v SML se skládá z dvojice složené z označených výstupů a jim přiřazených vstupních rysů. Primární cíl SML však přesahuje pouhou asimilaci dat - jeho cílem je odvodit funkci, která přesně modeluje základní vztah mezi vstupy a výstupy a která dokáže dobře zobecnit na dosud neznámé dvojice vstupů a výstupů, což je klíčový aspekt označovaný jako zobecnění.
+
+Jako příklad praktického využití SML uveďme tyto scénáře s mapováním vstupů a výstupů:
+\begin{enumerate}
+	\item \{zdraví hráče, vlastní zdraví, vzdálenost k hráči\} → \{akce (střelba, útěk, nečinnost)\}
+	\item \{předchozí pozice hráče, aktuální pozice hráče\} → \{příští pozice hráče\}
+	\item \{počet zabití a headshotů, spotřebovaná munice\} → \{hodnocení dovednosti\}
+	\item \{skóre, prozkoumaná/neprozkoumaná část mapy\} → \{lokace základny hráče\}
+\end{enumerate}
+Tato mapování ilustrují složité vztahy mezi vstupy a výstupy a ukazují všestrannost a význam SML v různých oblastech, včetně her i mimo ně.
+
+Dříve než se budeme věnovat konkrétním algoritmům, je nezbytné zdůraznit význam typů \uv{štítkových} dat pro utváření výstupních charakteristik a výběr vhodných metodik pro SML. Algoritmy SML lze rozdělit do tří hlavních typů podle povahy značkovacích dat (výstupů).
+
+Za prvé, \textbf{klasifikační algoritmy} jsou určeny k předpovídání kategoriálních štítků tříd, které mohou být diskrétní nebo nominální. Patří sem úlohy, jako je rozlišování mezi různými druhy ovoce nebo předpovídání úrovně úspěchu v herních scénářích.
+
+Za druhé, pokud se jedná o výstupní data reprezentovaná jako spojité intervaly (např. doba dokončení hry nebo doba udržení), úloha SML se posouvá směrem k \textbf{metrické regresi}.
+
+A konečně \textbf{preferenční učení} se zaměřuje na předpovídání ordinálních výstupů, jako jsou hodnosti a preference. To zahrnuje odvození základního globálního pořadí, které charakterizuje tyto ordinální značky, například pořadí preferencí pro různé úhly pohledu kamery nebo zvukové efekty.
+
+V kontextu preferenčního učení poskytuje trénovací signál pohled na relativní vztahy mezi instancemi modelovaného jevu, čímž odhaluje inherentní pořadí v rámci ordinálních značek. Oproti tomu regresní a klasifikační algoritmy poskytují odlišné formy informací - intenzitu a kategoriální klasifikaci - o zkoumaném jevu.
+
+\begin{figure}[ht]
+\includegraphics[scale=1.95]{2-1.png}
+\centering
+\caption{Ilustrace umělého neuronu. Do neuronu se vkládá \textbf{n} počet vstupních vektorů \textbf{A} s odpovídajícími váhovými hodnotami \textbf{w}. Neuron zpracovává vstup tak, že vypočítá vážený součet vstupů s odpovídajícími vahami a přidá váhu zkreslení (b): x-w+b. Výsledný vzorec se vloží do aktivační funkce (g), jejíž hodnota určuje výstup neuronu.\cite{Ghorbani2021}}
+\label{obrKASnake}
+\end{figure}
+
+\subsection{Artificial Neural Networks}
+\uv{Umělé neuronové sítě} neboli Artificial Neural Networks(ANN)
 
 \newpage
 
