@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  9 APR 2024 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  12 MAY 2024 09:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,11 +404,7 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box60
 )
-(./Strojové učení pro adaptaci autonomních agentů.aux
-
-LaTeX Warning: Label `obrKASnake' multiply defined.
-
-)
+(./Strojové učení pro adaptaci autonomních agentů.aux)
 \openout1 = `"Strojové učení pro adaptaci autonomních agentů.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
@@ -525,7 +521,7 @@ LaTeX Info: Redefining \nameref on input line 99.
 \openout3 = `"Strojové učení pro adaptaci autonomních agentů.out"'.
 
 \c@lstlisting=\count309
-<./Zadani+Grafika/symbol_cvut_konturova_verze_cb.pdf, id=107, 126.78566pt x 96.
+<./Zadani+Grafika/symbol_cvut_konturova_verze_cb.pdf, id=131, 126.78566pt x 96.
 54268pt>
 File: ./Zadani+Grafika/symbol_cvut_konturova_verze_cb.pdf Graphic file (type pd
 f)
@@ -540,7 +536,7 @@ ni+Grafika/symbol_cvut_konturova_verze_cb.pdf>] [2
 
 
 ]
-<./Zadani+Grafika/Zadani.pdf, id=124, 597.23125pt x 844.15375pt>
+<./Zadani+Grafika/Zadani.pdf, id=148, 597.23125pt x 844.15375pt>
 File: ./Zadani+Grafika/Zadani.pdf Graphic file (type pdf)
 <use ./Zadani+Grafika/Zadani.pdf>
 Package pdftex.def Info: ./Zadani+Grafika/Zadani.pdf  used on input line 146.
@@ -549,7 +545,7 @@ File: ./Zadani+Grafika/Zadani.pdf Graphic file (type pdf)
 <use ./Zadani+Grafika/Zadani.pdf>
 Package pdftex.def Info: ./Zadani+Grafika/Zadani.pdf  used on input line 146.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
-<./Zadani+Grafika/Zadani.pdf, id=127, page=1, 597.23125pt x 844.15375pt>
+<./Zadani+Grafika/Zadani.pdf, id=151, page=1, 597.23125pt x 844.15375pt>
 File: ./Zadani+Grafika/Zadani.pdf Graphic file (type pdf)
 <use ./Zadani+Grafika/Zadani.pdf, page 1>
 Package pdftex.def Info: ./Zadani+Grafika/Zadani.pdf , page1 used on input line
@@ -607,7 +603,7 @@ Package hyperref Warning: Glyph not defined in PU encoding,
 (hyperref)                removing `\crqq' on input line 32.
 
 [14]
-<./Kapitoly/1/Obrazky//1-1.png, id=231, 352.31625pt x 302.12875pt>
+<./Kapitoly/1/Obrazky//1-1.png, id=261, 352.31625pt x 302.12875pt>
 File: ./Kapitoly/1/Obrazky//1-1.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-1.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-1.png  used on input line 60.
@@ -618,7 +614,7 @@ Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-1.png  used on input line 60.
                                                   \__shipout_drop_firstpage_...
 l.66 \newpage
               <./Kapitoly/1/Obrazky//1-1.png>] [16]
-<./Kapitoly/1/Obrazky//1-2.png, id=255, 603.25375pt x 299.1175pt>
+<./Kapitoly/1/Obrazky//1-2.png, id=285, 603.25375pt x 299.1175pt>
 File: ./Kapitoly/1/Obrazky//1-2.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-2.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-2.png  used on input line 92.
@@ -638,7 +634,7 @@ Package hyperref Warning: Glyph not defined in PU encoding,
                                                   \__shipout_drop_firstpage_...
 l.103 \newpage
                <./Kapitoly/1/Obrazky//1-2.png>]
-<./Kapitoly/1/Obrazky//1-3.png, id=264, 631.35875pt x 367.3725pt>
+<./Kapitoly/1/Obrazky//1-3.png, id=294, 631.35875pt x 367.3725pt>
 File: ./Kapitoly/1/Obrazky//1-3.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-3.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-3.png  used on input line 112.
@@ -650,7 +646,7 @@ Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-3.png  used on input line 112.
                                                   \__shipout_drop_firstpage_...
 l.119 \newpage
                <./Kapitoly/1/Obrazky//1-3.png>] [19] [20]
-<./Kapitoly/1/Obrazky//1-4.png, id=291, 634.37pt x 545.03625pt>
+<./Kapitoly/1/Obrazky//1-4.png, id=322, 634.37pt x 545.03625pt>
 File: ./Kapitoly/1/Obrazky//1-4.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-4.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-4.png  used on input line 148.
@@ -665,7 +661,7 @@ Underfull \vbox (badness 2608) has occurred while \output is active []
                                                   \__shipout_drop_firstpage_...
 l.159 
        <./Kapitoly/1/Obrazky//1-4.png>]
-<./Kapitoly/1/Obrazky//1-5.png, id=301, 843.15pt x 474.27188pt>
+<./Kapitoly/1/Obrazky//1-5.png, id=332, 843.15pt x 474.27188pt>
 File: ./Kapitoly/1/Obrazky//1-5.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-5.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-5.png  used on input line 165.
@@ -681,62 +677,85 @@ l.171 \newpage
 ]
 Kapitola 2.
 (./Kapitoly/2/2.tex [25] [26]
-<./Kapitoly/2/Obrazky//2-1.png, id=339, 215.1293pt x 106.2201pt>
+<./Kapitoly/2/Obrazky//2-1.png, id=369, 215.1293pt x 106.2201pt>
 File: ./Kapitoly/2/Obrazky//2-1.png Graphic file (type png)
 <use ./Kapitoly/2/Obrazky//2-1.png>
-Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-1.png  used on input line 46.
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-1.png  used on input line 39.
 (pdftex.def)             Requested size: 419.50044pt x 207.12834pt.
  [27pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.55 \newpage
+l.57 \newpage
               <./Kapitoly/2/Obrazky//2-1.png>]
+<./Kapitoly/2/Obrazky//2-2.png, id=384, 374.5995pt x 323.40825pt>
+File: ./Kapitoly/2/Obrazky//2-2.png Graphic file (type png)
+<use ./Kapitoly/2/Obrazky//2-2.png>
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-2.png  used on input line 64.
+(pdftex.def)             Requested size: 374.59859pt x 323.40744pt.
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.70 \newpage
+              <./Kapitoly/2/Obrazky//2-2.png>] [29]
+<./Kapitoly/2/Obrazky//2-3.png, id=412, 251.43938pt x 154.32657pt>
+File: ./Kapitoly/2/Obrazky//2-3.png Graphic file (type png)
+<use ./Kapitoly/2/Obrazky//2-3.png>
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-3.png  used on input line 105.
+
+(pdftex.def)             Requested size: 314.29843pt x 192.90771pt.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.111 \newpage
+               <./Kapitoly/2/Obrazky//2-3.png>]
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 57.
+(hyperref)                removing `\clqq' on input line 117.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 57.
+(hyperref)                removing `\crqq' on input line 117.
 
-[28]
-
-Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 62.
-
+[31]
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 62.
+(hyperref)                removing `\clqq' on input line 122.
 
-[29]
-Overfull \hbox (25.214pt too wide) in paragraph at lines 67--67
+
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\crqq' on input line 122.
+
+[32]
+Overfull \hbox (25.214pt too wide) in paragraph at lines 127--127
 []\T1/cmr/bx/n/17.28 ^^RZp�tnovazebn� u�en�^^P ne-boli Re-in-for-ce-ment Lear-
  []
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 67.
+(hyperref)                removing `\clqq' on input line 127.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 67.
+(hyperref)                removing `\crqq' on input line 127.
 
-) [30]
-Kapitola 3.
-(./Kapitoly/3/3.tex [31
-
-]) [32]
-Kapitola 4.
-(./Kapitoly/4/4.tex) [33
-
-] [34
-
-] (./Kapitoly/Zaver/Zaver.tex) [35] [36
-
+) [33] [34
 
 ]
-(./Citace/Citace.tex
+Kapitola 3.
+(./Kapitoly/3/3.tex [35] [36] [37]) [38]
+Kapitola 4.
+(./Kapitoly/4/4.tex [39
+
+] [40] [41]) [42
+
+] (./Kapitoly/Zaver/Zaver.tex) [43]
+[44
+
+
+] (./Citace/Citace.tex
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
 .
 
@@ -784,7 +803,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 780429055058-[]6 /
  []
 
-[37]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 []$\T1/cmtt/m/n/12 https : / / en . wikipedia . org / w / index . php ? title =
  Tree _ traversal & oldid =
@@ -820,39 +839,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 guide / 2017 / 10 / 9 /
  []
 
-) [38] (./Strojové učení pro adaptaci autonomních agentů.aux)
+[46])
+Underfull \hbox (badness 10000) in paragraph at lines 74--287
+[]\T1/cmr/m/n/12 BOHRA, Aman. \T1/cmr/m/it/12 CLAS-SI-FI-CATION BY DE-CI-SION T
+REE IN-
+ []
 
-LaTeX Warning: There were multiply-defined labels.
 
+Underfull \hbox (badness 10000) in paragraph at lines 74--287
+\T1/cmr/m/it/12 DUCTION\T1/cmr/m/n/12 . On-line. In: SPPU BE Com-pu-ter La-bo-r
+a-tory(I,II,III,IV)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--287
+\T1/cmr/m/n/12 And Pro-ject RE-LA-TED STUDY MA-TE-RIAL. 2016. Do-stupn�
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--287
+\T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / becomputerlaboratory . blogspo
+t . com / 2016 / 10 /
+ []
+
+[47] (./Strojové učení pro adaptaci autonomních agentů.aux)
 Package rerunfilecheck Info: File `"Strojové učení pro adaptaci autonomních
  agentů".out' has not changed.
-(rerunfilecheck)             Checksum: 3A2005B1AC10764B62F4A749DFE717B3;5147.
+(rerunfilecheck)             Checksum: C4657F6E1F8A56F990C344B6C3C4CE0D;6393.
  ) 
 Here is how much of TeX's memory you used:
- 13302 strings out of 480437
- 198019 string characters out of 5898174
- 535116 words of memory out of 5000000
- 30612 multiletter control sequences out of 15000+600000
- 416484 words of font info for 56 fonts, out of 8000000 for 9000
+ 13377 strings out of 480437
+ 199145 string characters out of 5898174
+ 537468 words of memory out of 5000000
+ 30654 multiletter control sequences out of 15000+600000
+ 419571 words of font info for 60 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
- 72i,17n,80p,1269b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,17n,80p,1269b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Programs/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 }{c:/Programs/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}<c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb>
-<c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><
-c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c
-:/Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:
-/Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/
-Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/P
-rograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/Pr
-ograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/Pro
-grams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/Prog
-rams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "Strojové učení pro adaptaci autonomních agentů.pdf" (38
- pages, 1525193 bytes).
+}<c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+><c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+<c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:
+/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:
+/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/
+Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/P
+rograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/Pr
+ograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/Pro
+grams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/Prog
+rams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/Progr
+ams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/Progra
+ms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/Program
+s/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/Programs
+/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/Programs/
+texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/Programs/t
+exlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on "Strojové učení pro adaptaci autonomních agentů.pdf" (47
+ pages, 1663708 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 425 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 264 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 134 named destinations out of 1000 (max. 500000)
+ 322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

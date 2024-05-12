@@ -30,29 +30,89 @@ Jako příklad praktického využití SML uveďme tyto scénáře s mapováním 
 	\item \{počet zabití a headshotů, spotřebovaná munice\} → \{hodnocení dovednosti\}
 	\item \{skóre, prozkoumaná/neprozkoumaná část mapy\} → \{lokace základny hráče\}
 \end{enumerate}
-Tato mapování ilustrují složité vztahy mezi vstupy a výstupy a ukazují všestrannost a význam SML v různých oblastech, včetně her i mimo ně.
 
-Dříve než se budeme věnovat konkrétním algoritmům, je nezbytné zdůraznit význam typů \uv{štítkových} dat pro utváření výstupních charakteristik a výběr vhodných metodik pro SML. Algoritmy SML lze rozdělit do tří hlavních typů podle povahy značkovacích dat (výstupů).
+Tato mapování ilustrují složité vztahy mezi vstupy a výstupy a ukazují všestrannost a význam SML v různých oblastech, včetně her i mimo ně. Dříve než se budeme věnovat konkrétním algoritmům je nezbytné zdůraznit význam \uv{štítkových} dat pro utváření výstupních charakteristik a tím pádem vhodný výběr algoritmu SML. 
 
-Za prvé, \textbf{klasifikační algoritmy} jsou určeny k předpovídání kategoriálních štítků tříd, které mohou být diskrétní nebo nominální. Patří sem úlohy, jako je rozlišování mezi různými druhy ovoce nebo předpovídání úrovně úspěchu v herních scénářích.
-
-Za druhé, pokud se jedná o výstupní data reprezentovaná jako spojité intervaly (např. doba dokončení hry nebo doba udržení), úloha SML se posouvá směrem k \textbf{metrické regresi}.
-
-A konečně \textbf{preferenční učení} se zaměřuje na předpovídání ordinálních výstupů, jako jsou hodnosti a preference. To zahrnuje odvození základního globálního pořadí, které charakterizuje tyto ordinální značky, například pořadí preferencí pro různé úhly pohledu kamery nebo zvukové efekty.
-
-V kontextu preferenčního učení poskytuje trénovací signál pohled na relativní vztahy mezi instancemi modelovaného jevu, čímž odhaluje inherentní pořadí v rámci ordinálních značek. Oproti tomu regresní a klasifikační algoritmy poskytují odlišné formy informací - intenzitu a kategoriální klasifikaci - o zkoumaném jevu.
+\newpage
 
 \begin{figure}[ht]
 \includegraphics[scale=1.95]{2-1.png}
 \centering
 \caption{Ilustrace umělého neuronu. Do neuronu se vkládá \textbf{n} počet vstupních vektorů \textbf{A} s odpovídajícími váhovými hodnotami \textbf{w}. Neuron zpracovává vstup tak, že vypočítá vážený součet vstupů s odpovídajícími vahami a přidá váhu zkreslení (b): x-w+b. Výsledný vzorec se vloží do aktivační funkce (g), jejíž hodnota určuje výstup neuronu.\cite{Ghorbani2021}}
-\label{obrKASnake}
+\label{obrNeuron}
 \end{figure}
 
-\subsection{Artificial Neural Networks}
-\uv{Umělé neuronové sítě} neboli Artificial Neural Networks(ANN)
+Algoritmy SML lze rozdělit do dvou hlavních typů podle povahy značkovacích dat (výstupů):
+\begin{enumerate}
+	\item \textbf{Klasifikace}
+	\item \textbf{Regrese}
+\end{enumerate}
+
+\subsection{Klasifikace}
+Klasifikace zahrnuje predikci kategoriálních cílových proměnných, které označují diskrétní třídy nebo štítky. Příkladem může být rozlišení e-mailů na poštu a spam, výše zmíněný příklad s jablky a hruškami a posouzení, zda pacient vykazuje vysoké riziko srdečního onemocnění. Úkolem klasifikačních algoritmů je naučit se mapování mezi vstupními znaky a předem definovanými třídami.
+
+\subsubsection{Support Vector Machine(Metoda podpůrných vektorů)}
+Support Vector Machines(SVM)\cite{Steinwart2008} jsou poměrně oblíbené v oblasti algoritmů SML, které se zabývají jak klasifikačními, tak regresními úlohami. SVM fungují jako binární lineární klasifikátory, které jsou vycvičeny tak, aby optimalizovaly rozpětí mezi různými příklady tříd v rámci souboru dat, jako jsou například jablka a hrušky. Stejně jako ostatní metody SML využívají SVM atributy z nových a dosud nezaznamenaných příkladů k předpovědi příslušných tříd.
 
 \newpage
+
+SVM jsou široce používány v různých oblastech, včetně kategorizace textu, rozpoznávání řeči, klasifikace obrázků a rozpoznávání ručně psaných znaků, a prokazují tak všestrannost a účinnost v různých aplikacích.
+
+Podobně jako umělé neuronové sítě (ANN) vytvářejí SVM ve vstupním prostoru hyperrovinu, která slouží jako funkce f odpovědná za mapování vstupů na cílové výstupy. Na rozdíl od ANN, které minimalizují nesoulad mezi výstupem modelu a cílovým výstupem pomocí gradientního sestupu (zpětného šíření), se však SVM snaží vytvořit hyperrovinu, která maximalizuje rozpětí k nejbližšímu datovému bodu libovolné třídy. Tato hyperplocha s maximální marží účinně odděluje datové body \((x_i)\) třídy od štítků \((y_i)\) označené jako 1 od bodů označených jako -1 v rámci souboru dat obsahujícího n vzorků. Zjednodušeně řečeno, hyperplocha maximalizuje vzdálenost k nejbližšímu datovému bodu \((x_i)\) z kterékoli třídy. Obecně je definována jako \(\textbf{w}\cdot{\textbf{x}} - b = 0\), kde \textbf{w} představuje váhový (normálový) vektor hyperplochy a \(\frac{b}{||\textbf{w}||}\) určuje posun nebo vychýlení hyperplochy od počátku, SVM používají vstupní atributy \textbf{x} z trénovacího souboru dat k vytvoření této hyperplochy(viz obrázek \ref{obrSVM}).
+
+\begin{figure}[ht]
+\includegraphics[scale=1]{2-2.png}
+\centering
+\caption{Příklad hyperplochy s maximální hranicí (červená tlustá čára) a hranicemi (černé čáry) pro SVM, která je natrénována na vzorcích dat ze dvou tříd. Plné a prázdné kruhy odpovídají datům se značkami 1, resp. -1. Klasifikace je v tomto příkladu mapována na dvourozměrný vstupní vektor \((x_1, x_2)\). Dva vzorky dat na okraji - kruhy znázorněné červeným obrysem - jsou podpůrné vektory.\cite{Chen2022}}
+\label{obrSVM}
+\end{figure}
+
+\newpage
+
+Formálně vzato je tedy SVM funkce \(f(x;w,b)\), která předpovídá cílové výstupy \((y)\) a snaží se:
+\begin{equation}
+\text{\textbf{minimalizovat}}\;||\textbf{w}||,\;\text{\textbf{podléhá}}\;y_i(\textbf{w} \cdot x_i-b)\geq 1,\;pro\;i=1,..., n
+\label{eq2.1}
+\end{equation}
+
+
+Parametry klasifikátoru SVM, váhy (w) a zkreslení (b), určují jeho funkčnost. Datové body (vektory \(x_i\)), které se nacházejí nejblíže k určené hyperrovině, se označují jako podpůrné vektory. Daná úloha je považována za řešitelnou, pokud trénovací data vykazují lineární separabilitu, což se často označuje jako klasifikační úloha s tvrdou hranicí (viz obr. \ref{obrSVM}).
+Pokud data nejsou lineárně separovatelná ("soft-margin"), SVM se místo toho pokusí:
+\begin{equation}
+\text{\textbf{minimalizovat}}\;[\frac{1}{n}\sum_{i=1}^{n} max(0,1-y_i(\textbf{w} \cdot x_i-b))]+\lambda||\textbf{w}||^2
+\label{eq2.2}
+\end{equation}
+
+Výraz \(\lambda||\textbf{w}||^2\) je výsledkem, pokud jsou splněna tvrdá omezení uvedená v rovnici \ref{eq2.1}, což znamená, že všechny datové body jsou správně klasifikovány na pravé straně okraje. Hodnota vypočtená v rovnici \ref{eq2.2} je přímo úměrná vzdálenosti od okraje pro nesprávně klasifikovaná data, přičemž \(\lambda\) slouží ke kvalitativnímu určení rozsahu, v jakém by se měla velikost okraje zvětšit, a zároveň zajišťuje, že datové body \((x_i)\) zůstanou na správné straně okraje. Volba malé hodnoty \(\lambda\) se blíží klasifikátoru s tvrdou marží pro lineárně separovatelná data.
+
+V konvenční metodice pro trénování klasifikátorů "soft-margin" je proces učení chápán jako problém kvadratického programování, který vyžaduje prozkoumání prostoru parametrů (\textbf{w} a b) s cílem zjistit nejširší marži, která zahrnuje všechny datové body. Mezi alternativní metodiky patří subgradientní sestup a souřadnicový sestup.
+
+Kromě lineární klasifikace SVM umožňuje i nelineární klasifikaci s využitím různých nelineárních jader. Tato jádra usnadňují mapování vstupního prostoru na prostor vyšších rozměrů, čímž rozšiřují použitelnost SVM. Navzdory této transformaci zůstává základní cíl SVM zachován, i když s nahrazením bodových součinů nelineárními funkcemi jádra. Tato úprava umožňuje algoritmu vymezit hyperplochu s maximální hranicí v transformovaném prostoru příznaků. Mezi nejznámější jádra používaná ve spojení s SVM patří polynomiální funkce, Gaussovy radiální bázové funkce a hyperbolické tangenciální funkce.
+
+Zatímco původně byly SVM navrženy pro řešení binární klasifikace, vznikla řada iterací SVM pro klasifikaci a regresi více tříd. SVM mají oproti alternativním SML několik výhod. Zejména vykazují účinnost při řešení problémů spojených s velkými, ale řídkými soubory dat, protože jejich účinnost závisí pouze na podpůrných vektorech pro konstrukci hyperploch. Kromě toho si SVM dovedou poradit s rozsáhlými prostory příznaků, protože složitost jejich učební úlohy není ovlivněna dimenzionalitou prostoru příznaků. Dále SVM představují jednoduchý konvexní optimalizační problém, který zajišťuje konvergenci k singulárnímu globálnímu řešení. A konečně, klasifikační přístup se "soft-margin" umožňuje snadnou kontrolu nad tendencemi k nadměrnému přizpůsobování.
+
+\newpage
+
+\subsection{Regrese}
+Na rozdíl od klasifikace se regrese zaměřuje na předpovídání spojitých cílových proměnných, které představují číselné hodnoty. Jedná se například o předpovídání ceny domu s ohledem na faktory jako je velikost, poloha a vybavení, nebo o odhad prodeje výrobků. Regresní algoritmy jsou navrženy tak, aby se naučily mapování mezi vstupními prvky a spojitými číselnými hodnotami.
+
+\subsubsection{Decision Trees(Rozhodovací stromy)}
+V rámci rozhodovacích stromů(DT)\cite{Breiman2017} má zkoumaná funkce \textbf{f} strukturu rozhodovacího stromu, který mapuje atributy pozorování dat na odpovídající cílové hodnoty. Vstupy jsou reprezentovány jako uzly, zatímco výstupy jsou ve stromu znázorněny jako listy. Potenciální hodnoty každého vstupního uzlu jsou vymezeny různými větvemi vycházejícími z tohoto uzlu. Analogicky k jiným SML jsou rozhodovací stromy rozděleny do kategorií podle typu výstupních dat, která se snaží naučit. Rozhodovací stromy lze zejména členit na klasifikační nebo regresní podle toho, zda cílový výstup obsahuje konečnou množinu hodnot, nebo spojitou množinu spojitých (intervalových) hodnot.
+
+Příklad rozhodovacího stromu je znázorněn na obrázku \ref{obrDT}. V tomto stromovém zobrazení odpovídají uzly vstupním atributům a větve se rozšiřují na potomky pro každou myslitelnou hodnotu každého vstupního atributu. Následně listy označují výstupní hodnoty, v tomto případě ohraničují výsledky zda je jedinec studentem nebo zda má příznivé kreditní skóre. Tyto výsledky jsou závislé na hodnotách vstupních atributů, jak je určuje cesta, kterou procházíme od kořene k listu.
+
+\begin{figure}[ht]
+\includegraphics[scale=1.25]{2-3.png}
+\centering
+\caption{Příklad DT: Vzhledem k věku, statusu studenta a skóre kreditní karty strom předpovídá, zda osoba vlastní počítač. Uzly stromu (zaoblené obdélníky) představují atributy dat neboli vstupy, zatímco listy (ovály) představují cílové hodnoty neboli výstupy. Větve stromu představují možné hodnoty příslušného nadřazeného uzlu stromu.\cite{Bohra2016}}
+\label{obrDT}
+\end{figure}
+
+\newpage
+
+Cílem DT je formulovat mapování reprezentované jako stromový model, který je schopen předpovídat cílové výstupní hodnoty na základě více vstupních atributů. Základní a široce používaná metoda učení DT z dat je charakterizována hladovým algoritmem. Tento algoritmus předpokládá, že vstupní atributy i cílové výstupy mají konečné diskrétní oblasti a vykazují kategoriální charakteristiky. V případech, kdy vstupy nebo výstupy obsahují spojité hodnoty, může konstrukci stromu předcházet diskretizace. Iterační konstrukce stromu zahrnuje rozdělení dostupné trénovací množiny dat na podmnožiny, která se řídí výběrem atributů. Tento rekurzivní proces se odvíjí atribut po atributu a postupně zpřesňuje strukturu stromu.
+
+Různé iterace výše uvedeného postupu vedou k různým algoritmům rozhodovacích stromů. V oblasti učení rozhodovacích stromů se zejména používají dvě významné varianty: Iterative Dichotomiser 3 (ID3) a jeho nástupce C4.5.
 
 \section{\uv{Učení bez učitele} neboli Unsupervised ML}
 TBA\texttrademark
