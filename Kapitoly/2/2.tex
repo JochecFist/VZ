@@ -15,7 +15,7 @@ Existuje několik typů strojového učení, přičemž každý z nich má zvlá
 \newpage
 
 \section{Supervised Machine Learning}
-\uv{Učení s učitelem} neboli Supervised Machine Learning(SML)\cite{Russellc1995} představuje algoritmický proces zaměřený na aproximaci základní funkce, která spojuje označená data s jejich odpovídajícími atributy nebo rysy. Tento metodický přístup je založen na využití označených příkladů k rozpoznání složitých vztahů v rámci souborů dat.
+\uv{Učení s učitelem}(SML)\cite{Russellc1995} představuje algoritmický proces zaměřený na aproximaci základní funkce, která spojuje označená data s jejich odpovídajícími atributy nebo rysy. Tento metodický přístup je založen na využití označených příkladů k rozpoznání složitých vztahů v rámci souborů dat.
 
 Vezměme si typický příklad zahrnující stroj, který má za úkol rozlišovat mezi jablky a hruškami na základě specifikovaných vlastností, jako je např. barva a velikost. Prostřednictvím vystavení mnoha označeným vzorkům ovoce - z nichž každý obsahuje odlišné kombinace barvy a velikosti spolu s odpovídajícími označeními (jablko nebo hruška) - prochází stroj fází učení, aby zvládl tento klasifikační úkol. Po dokončení procesu učení stroj usiluje o to, aby dokázal určit kategorii (jablko nebo hruška) nového, dosud neviděného ovoce výhradně na základě pozorovaných atributů barvy a velikosti.
 
@@ -23,7 +23,7 @@ SML je zásadně závislý na přizpůsobeném souboru dat s označenými tréno
 
 Každá datová instance v SML se skládá z dvojice složené z označených výstupů a jim přiřazených vstupních rysů. Primární cíl SML však přesahuje pouhou asimilaci dat - jeho cílem je odvodit funkci, která přesně modeluje základní vztah mezi vstupy a výstupy a která dokáže dobře zobecnit na dosud neznámé dvojice vstupů a výstupů, což je klíčový aspekt označovaný jako zobecnění.
 
-Jako příklad praktického využití SML uveďme tyto scénáře s mapováním vstupů a výstupů:
+Jako příklad praktického využití SML ve hrách si uveďme tyto scénáře s mapováním vstupů a výstupů:
 \begin{enumerate}
 	\item \{zdraví hráče, vlastní zdraví, vzdálenost k hráči\} → \{akce (střelba, útěk, nečinnost)\}
 	\item \{předchozí pozice hráče, aktuální pozice hráče\} → \{příští pozice hráče\}
@@ -104,7 +104,7 @@ Příklad rozhodovacího stromu je znázorněn na obrázku \ref{obrDT}. V tomto 
 \begin{figure}[ht]
 \includegraphics[scale=1.25]{2-3.png}
 \centering
-\caption{Příklad DT: Vzhledem k věku, statusu studenta a skóre kreditní karty strom předpovídá, zda osoba vlastní počítač. Uzly stromu (zaoblené obdélníky) představují atributy dat neboli vstupy, zatímco listy (ovály) představují cílové hodnoty neboli výstupy. Větve stromu představují možné hodnoty příslušného nadřazeného uzlu stromu.\cite{Bohra2016}}
+\caption{Příklad DT: Vzhledem k věku, statusu studenta a skóre kreditní karty strom předpovídá, zda si osoba koupí počítač. Uzly stromu (zaoblené obdélníky) představují atributy dat neboli vstupy, zatímco listy (ovály) představují cílové hodnoty neboli výstupy. Větve stromu představují možné hodnoty příslušného nadřazeného uzlu stromu.\cite{Bohra2016}}
 \label{obrDT}
 \end{figure}
 
@@ -114,16 +114,209 @@ Cílem DT je formulovat mapování reprezentované jako stromový model, který 
 
 Různé iterace výše uvedeného postupu vedou k různým algoritmům rozhodovacích stromů. V oblasti učení rozhodovacích stromů se zejména používají dvě významné varianty: Iterative Dichotomiser 3 (ID3) a jeho nástupce C4.5.
 
-\section{\uv{Učení bez učitele} neboli Unsupervised ML}
-TBA\texttrademark
+\section{Unsupervised Machine Learning}
+\uv{Učení bez učitele}(UML) je technika strojového učení, při které algoritmus samostatně odhaluje vzory a vztahy v datech, jež nejsou opatřena žádnými štítky nebo etiketami. Na rozdíl od řízeného učení, kde algoritmus pracuje s předem označenými výstupy, se v bezdozorovém učení algoritmus obejde bez těchto předem definovaných cílů. Hlavním cílem UML je často identifikace skrytých vzorců, podobností či klastrů v rámci dat, které mohou sloužit k různým účelům, včetně průzkumu dat, vizualizace, redukce dimenzionality a dalších aplikací.
+
+Tento koncept lze lépe představit prostřednictvím konkrétního příkladu. Představme si, že máme dataset obsahující informace o nákupech, které jsme uskutečnili v obchodě. Např. pomocí techniky shlukování může algoritmus seskupit podobné nákupní chování mezi námi a ostatními zákazníky, což umožňuje odhalit potenciální zákazníky bez nutnosti použití předdefinovaných štítků. Tento typ analýzy poskytuje cenné poznatky pro podniky, neboť umožňuje efektivněji zacílit na specifické zákaznické segmenty a zároveň identifikovat anomálie nebo odlehlé hodnoty v datech.
+
+Algoritmy UML lze rozdělit do dvou hlavních typů:
+\begin{enumerate}
+	\item \textbf{Shlukování}
+	\item \textbf{"Těžba častých vzorů" neboli asociace}
+\end{enumerate}
+
+\subsection{Shlukování}
+Shlukování\cite{Engelbrecht2007} představuje úlohu učení bez učitele, která se zaměřuje na identifikaci neznámých skupin v souboru dat. Cílem je zajistit, aby datové body v rámci stejné skupiny nebo shluku vykazovaly vysokou podobnost a zároveň se lišily od dat v jiných shlucích.
 
 \newpage
 
-\section{\uv{Částečně řízené učení} neboli Semi-Supervised ML}
-TBA\texttrademark
+Tato technika se široce uplatňuje v různých oblastech, včetně detekce skupin dat ve více atributech, a také v úlohách redukce dat, jako je komprese dat, vyhlazení šumu, detekce odlehlých hodnot a rozdělení datové sady. Shlukování má značný význam zejména v herním průmyslu, kde se využívá pro modelování hráčů, vývoj herních strategií a generování obsahu.
+
+\begin{figure}[ht]
+\includegraphics[scale=0.35]{2-4.png}
+\centering
+\caption{Jednoduchá interpretace shlukování.\cite{Rohit2023}}
+\label{obrJIS}
+\end{figure}
+
+Podobně jako klasifikace zahrnuje shlukování přiřazení dat ke třídám, nicméně značky tříd nejsou předem známy a shlukovací algoritmy se je snaží odhalit iterativním vyhodnocováním jejich kvality. Protože správné shluky nejsou předem definovány, podobnost a nepodobnost závisí pouze na atributech analyzovaných dat. Efektivní shluky jsou definovány dvěma základními vlastnostmi:
+\begin{enumerate}
+	\item Vysoká podobnost uvnitř shluku, známá také jako vysoká kompaktnost
+	\item Nízká podobnost mezi shluky neboli dobrá separace
+\end{enumerate}
+
+Běžným měřítkem kompaktnosti je průměrná vzdálenost mezi každým vzorkem ve shluku a jeho nejbližším reprezentativním bodem, například centroidem, jak se využívá v algoritmu k-means. Mezi míry separace patří jednoduchá vazba a úplná vazba:
+\begin{enumerate}
+	\item Jednoduchá vazba:
+	\begin{itemize}
+		\item Označuje nejmenší vzdálenost mezi kterýmkoli vzorkem v jednom shluku a kterýmkoli vzorkem v jiném shluku. 
+	\end{itemize} 
+	\item Úplná vazba:
+	\begin{itemize}
+		\item Označuje naopak největší vzdálenost mezi kterýmkoli vzorkem v jednom shluku a kterýmkoli vzorkem v jiném shluku.
+	\end{itemize} 
+\end{enumerate}
+
+Ačkoli kompaktnost a separace jsou objektivními měřítky pro posouzení platnosti shluků, je nezbytné si uvědomit, že nemusí nutně ukazovat na smysluplnost shluků.
 
 \newpage
 
-\section{\uv{Zpětnovazebné učení} neboli Reinforcement Learning}
-TBA\texttrademark
+Kromě už zmíněných metrik platnosti jsou shlukovací algoritmy charakterizovány funkcí příslušnosti a postupem vyhledávání. Funkce příslušnosti určuje strukturu shluků ve vztahu ke vzorkům dat, zatímco postup vyhledávání popisuje strategii použitou ke shlukování dat vzhledem ke konkrétní funkci příslušnosti a metrice platnosti. Některé strategie například zahrnují rozdělení všech datových bodů do shluků najednou, jako je tomu u k-means, zatímco jiné zahrnují rekurzivní slučování nebo rozdělování shluků, jako je tomu u hierarchického shlukování. Shlukování lze provádět pomocí široké škály algoritmů, včetně už zmíněného hierarchického shlukování a k-means ale také pomocí k-medoidů, DBSCAN a samoorganizujících se map. Tyto algoritmy se liší způsobem, jakým definují shluk, a metodami, které používají k jeho vytvoření. Výběr vhodného shlukovacího algoritmu a s ním spojených parametrů, jako je například použitá funkce vzdálenosti nebo očekávaný počet shluků, závisí na konkrétních cílech studie a povaze dostupných dat. V následujícím oddíle jsou uvedené algoritmy shlukování, které jsou považovány za nejefektivnější pro studium umělé inteligence ve hrách.
 
+\subsubsection{K-means shlukování}
+K-means\cite{Macqueen1967} je vektorová kvantizační technika, která je díky své efektivní rovnováze mezi jednoduchostí a výkonností považována za nejoblíbenější shlukovací algoritmus. Využívá přímočarý přístup k rozdělení dat, kdy je databáze objektů rozdělena do k shluků. Cílem je minimalizovat součet čtvercových euklidovských vzdáleností mezi každým datovým bodem a příslušným středem shluku neboli centroidem - tato vzdálenost se běžně označuje jako kvantizační chyba.
+
+V k-means je každý shluk reprezentován jedním bodem, známým jako centroid, přičemž každý vzorek dat je přiřazen k nejbližšímu centroidu. Samotný centroid se vypočítá jako průměr datových vzorků v rámci shluku. Metrikou platnosti uvnitř shluku, kterou k-means používá, je průměrná vzdálenost každého datového bodu od příslušného centroidu. Zpočátku jsou vzorky dat náhodně přiřazeny ke shlukům a algoritmus pak iterativně střídavě přiřazuje datové body ke shlukům a aktualizuje centroidy na základě nového složení shluků. Základní kroky algoritmu jsou následující:
+\begin{itemize}
+	\item Pro dané \textbf{k}:
+	\begin{enumerate}
+		\item Náhodně rozděl datové body do \textbf{k} neprázdných shluků. 
+		\item Vypočti polohy centroid shluků aktuálního rozdělení.
+		\item Přiřaď každý datový bod ke shluku s nejbližším centroidem. Pokud se přiřazení nemění, ukončíme výpočet, v opačném případě přejdeme ke kroku 2.
+	\end{enumerate}
+\end{itemize}
+
+Ačkoli je metoda k-means velmi oblíbená díky své jednoduchosti, má několik významných omezení. Zaprvé je použitelná pouze pro datové objekty ve spojitém prostoru. Za druhé, počet shluků, \textbf{k}, musí být předem určen. a za třetí, metoda k-means má problémy s identifikací shluků s nekonvexními tvary, protože je omezena na hledání hyperkulových shluků.
+
+\newpage
+
+Kromě toho je algoritmus k-means citlivý na odlehlé hodnoty, neboli datové body s mimořádně velkými nebo malými hodnotami mohou zkreslit celkové rozložení dat, a tím ovlivnit výkonnost algoritmu.
+
+\subsubsection{Hierarchické shlukování}
+Metody shlukování, jejichž cílem je vytvořit hierarchii shluků, se řadí do kategorie hierarchického shlukování\cite{Kaufman1990}. Obecně existují dvě základní strategie: aglomerativní a rozdělovací. Aglomerativní strategie vytváří hierarchie způsobem zdola nahoru postupným slučováním datových bodů, zatímco divizivní strategie vytváří hierarchie postupným rozdělováním souboru dat způsobem shora dolů. Obě strategie jsou ze své podstaty chamtivé. Hierarchické shlukování se spoléhá na matici vzdáleností, která řídí proces shlukování, ať už aglomerativního, nebo divizivního.Na rozdíl od metody k-means tato metoda nevyžaduje, aby byl předem určen počet shluků \textbf{k}, ale vyžaduje podmínku ukončení.
+
+Pro ilustraci uvedeme základní kroky algoritmu aglomerativního shlukování, které jsou následující:
+\begin{itemize}
+	\item Pro dané \textbf{k}:
+	\begin{enumerate}
+		\item Vytvořte jeden shluk pro každý vzorek dat.
+		\item Najděte nejkratší euklidovskou vzdálenost
+mezi dvěma body, které nejsou ve stejném shluku.
+		\item Slučte shluky obsahující tyto dva vzorky. Pokud existuje \textbf{k} shluků, ukončíme výpočet, v opačném případě přejdeme ke kroku 2.
+	\end{enumerate}
+\end{itemize}
+
+Při rozdělovacím hierarchickém shlukování patří všechny datové body zpočátku do jednoho shluku, který je pak iterativně rozdělen, dokud se každý datový bod nenachází ve vlastním shluku. Tento proces se řídí strategií rozdělení, jako je například Divisive Analysis Clustering (DIANA), nebo využívá jiný shlukovací algoritmus k rozdělení dat do dvou shluků, například 2-means. Jak jsou shluky rekurzivně slučovány nebo rozdělovány, lze výsledné shluky vizualizovat prostřednictvím několika úrovní vnořeného rozdělení. Výsledkem je v podstatě stromová reprezentace shluků, známá jako dendrogram. Konečné shlukování se určí rozříznutím dendrogramu na požadované úrovni čtvercové euklidovské vzdálenosti.
+
+\begin{figure}[ht]
+\includegraphics[scale=0.2]{2-5.png}
+\centering
+\caption{Dendrogram hierarchického shlukování (UPGMA) s výškou uzlů.\cite{WikiDG}}
+\label{obrDG}
+\end{figure}
+
+\newpage
+
+Hierarchické shlukování představuje shluky jako soubor datových vzorků v jejich rámci, což znamená, že datový vzorek je seskupen se svým nejbližším sousedem. Naproti tomu k-means definuje každý shluk pomocí centroidu, takže vzorek dat patří do shluku spojeného s nejbližším centroidem. Kromě toho se při měření platnosti shluků aglomerativní shlukování spoléhá na nejkratší vzdálenost mezi kterýmkoli vzorkem v jednom shluku a kterýmkoli vzorkem v jiném shluku, zatímco k-means používá průměrnou vzdálenost každého vzorku od centroidu. Díky těmto rozdílným algoritmickým charakteristikám může hierarchické shlukování pojmout data s různými spojitými tvary, zatímco k-means je omezeno na hyperkulaté shluky.
+
+\subsection{\uv{Těžba častých vzorů} neboli asociace(FPM)}
+FPM\cite{Agrawal1993} zahrnuje řadu technik určených k odhalování častých vzorů a struktur v datech. Tyto vzory mohou zahrnovat sekvence a množiny položek. Původně vyvinuté pro dolování asociačních pravidel, FPM se snaží identifikovat atributy dat, které se často vyskytují společně, a vytvářet tak mezi nimi podmíněná pravidla. V kontextu herní umělé inteligence jsou důležité zejména dva specifické typy dolování častých vzorů: dolování častých množin položek a dolování častých sekvencí. Frequent itemset mining se zaměřuje na odhalování struktur mezi datovými atributy bez ohledu na vnitřní pořadí, zatímco frequent sequence mining se snaží odhalit vzory založené na vnitřním časovém pořadí datových atributů. Ačkoli FPM spadá pod neřízené učení, liší se jak svými cíli, tak použitými algoritmy.
+
+\begin{figure}[ht]
+\includegraphics[scale=1.0]{2-6.png}
+\centering
+\caption{Jednoduchá vizualizace FPM.}
+\label{obrFPM}
+\end{figure}
+
+\newpage
+
+Mezi široce používané a škálovatelné metody pro dolování častých vzorů patří algoritmus Apriori pro dolování množin položek a GSP pro dolování sekvencí. V následujících dvou částí tyto algoritmy popíšeme jako reprezentativní algoritmy pro dolování častých množin položek a dolování častých sekvencí.
+
+\subsubsection{Apriori}
+Apriori\cite{Agrawal1994} je algoritmus určený pro dolování častých položek. Je vhodný pro analýzu datových souborů, které obsahují množiny instancí, známé také jako transakce, z nichž každá obsahuje kolekci položek nebo množiny položek. Transakce mohou například představovat knihy zakoupené zákazníkem Amazonu nebo aplikace pořízené uživatelem chytrého telefonu. Algoritmus je poměrně jednoduchý a funguje následovně: při zadání předem definované prahové hodnoty nazývané podpora (T) identifikuje Apriori množiny položek, které jsou podmnožinami alespoň T transakcí v databázi. Apriori se v podstatě snaží odhalit všechny množiny položek, které splňují nebo překračují minimální prahovou hodnotu podpory, která představuje minimální četnost, s níž se daná množina položek objevuje v souboru dat.
+
+\newpage
+
+Pro ilustraci použití Apriori v herním kontextu uvádíme níže reprezentativní seznam událostí čtyř hráčů v online hře na hraní rolí:
+\begin{itemize}
+	\item <Dosažena 11. úroveň; Odemčeno více než 50 \% úspěchů; Zakoupen démonický luk>
+	\item <Dosažena 11. úroveň\; Zakoupen démonický luk>
+	\item <Odemčeno více než 50 \% úspěchů\; Zakoupen démonický luk\; Nalezen pramen života>
+	\item <Dosažena 11. úroveň\; Nalezen pramen života\; Odemčeno více než 50 \% úspěchů\; Zakoupen démonický luk>
+\end{itemize}
+
+Vzhledem k příkladovému souboru dat a za předpokladu prahové hodnoty podpory 3 lze identifikovat následující soubory obsahující pouze jednu položku: <Dosažena 11. úroveň>, <Odemčeno více než 50 \% úspěchů> a <Zakoupen démonický luk>. Pokud místo toho hledáme sady 2-položek se stejným prahem podpory, najdeme např. <Dosažena 11. úroveň, Zakoupen démonický luk>, protože tři transakce obsahují obě tyto položky. Žádné delší sady předmětů nejsou k dispozici (tj. nejsou časté) pro počet podpor 3. Tento postup lze použít pro libovolný práh podpory k odhalení častých sad předmětů.
+
+\subsubsection{Zobecněné sekvenční vzory(GSP)}
+Algoritmy pro dolování častých položek jsou nedostatečné, pokud je pro analýzu rozhodující posloupnost událostí. Pokud soubor dat obsahuje události uspořádané do uspořádaných sekvencí, jako jsou časové sekvence nebo časové řady, je nutný přístup založený na dolování častých sekvencí. Problém dolování častých sekvencí lze stručně definovat jako identifikaci často se vyskytujících následných sekvencí v rámci dané sekvence nebo množiny sekvencí.
+
+Formálněji řečeno, v souboru dat, kde každý vzorek představuje posloupnost událostí, známou jako sekvence dat, je sekvenční vzor definován jako posloupnost událostí, která se kvalifikuje jako častá sekvence, pokud se ve vzorcích objevuje pravidelně. Častá sekvence je charakterizována jako sekvenční vzor, který je podporován alespoň minimálním počtem datových sekvencí, jak je určeno prahem nazývaným minimální hodnota podpory. Datová sekvence podporuje sekvenční vzor, pokud obsahuje všechny události vzoru ve stejném pořadí. Například datová posloupnost < v, w, x, y, z > podporuje vzor < v, z >. Podobně jako při vytěžování častých množin položek se počet datových posloupností, které podporují sekvenční vzor, označuje jako počet podpor.
+
+\newpage
+
+Algoritmus GSP (Generalized Sequential Patterns)\cite{Srikant1996} je široce používaná technika pro dolování častých sekvencí z dat. Algoritmus GSP začíná identifikací častých sekvencí sestávajících z jediné události, známých jako 1-sekvence. Tyto sekvence se pak samy spojí a vytvoří všechny možné kandidáty na 2-sekvence, pro které se vypočítá počet podpor. Sekvence, které splňují práh četnosti, se následně samy spojí a vytvoří kandidáty na 3-sekvence. Tento proces pokračuje, přičemž algoritmus v každém kroku postupně zvyšuje délku sekvence, dokud nejsou vygenerováni žádní další kandidáti. Základním principem algoritmu je, že pokud je sekvenční vzor častý, pak musí být časté i všechny jeho sousední podvzory.
+
+\newpage
+
+\section{Semi-Supervised Machine Learning}
+\uv{Částečně řízené učení} je typ strojového učení, který překlenuje mezeru mezi řízeným a neřízeným učením tím, že využívá jak označená, tak neoznačená data. Tato metoda je výhodná zejména v případech, kdy je získávání označených dat nákladné a vyžaduje specializované dovednosti nebo značné úsilí. Integrací omezeného množství označených dat s větším množstvím neoznačených dat zvyšuje polopřímé učení výkonnost a efektivitu modelu ve scénářích, kde je úplné označování nepraktické.
+
+Tyto techniky se používají při práci se soubory dat, které obsahují malé množství označených dat a velkou část neoznačených dat. V takových případech lze k předpovědi štítků pro neoznačená data použít neřízené metody, které se pak použijí jako vstupy pro řízené techniky. Tento přístup je zvláště užitečný pro soubory obrazových dat, kde je běžné, že ne všechny obrazy jsou označeny. Nejznámějším typem S-SML je GAN síť.
+
+\subsection{Generativní adverzní síť (GAN)}
+GAN\cite{Goodfellow2021} je strojového učení určené ke generování nových vzorků dat, které jsou podobné danému souboru dat. Sítě GAN, které představil Ian Goodfellow se svými kolegy v roce 2014, se skládají ze dvou neuronových sítí, známých jako generátor a diskriminátor, které jsou trénovány současně prostřednictvím procesu adverzního učení.
+
+\begin{figure}[ht]
+\includegraphics[scale=0.75]{2-7.png}
+\centering
+\caption{Jednoduchá vizualizace GAN sítě. \cite{GoogleGAN2022}}
+\label{obrGAN}
+\end{figure}
+
+\newpage
+
+Hlavním úkolem generátorové sítě je vytvářet syntetické vzorky dat, které napodobují rozložení skutečných dat. Začíná s náhodným šumem a transformuje tento šum na data, která se podobají trénovací množině. Naopak diskriminační síť funguje jako klasifikátor, který rozlišuje mezi vzorky skutečných dat a vzorky vytvořenými generátorem. Během tréninku generátor zlepšuje svou schopnost vytvářet reálná data tím, že dostává zpětnou vazbu od diskriminátoru, zatímco diskriminátor zlepšuje svou schopnost rozlišovat mezi skutečnými a syntetickými daty.
+
+Trénování pokračuje, dokud generátor nevytvoří vzorky, které jsou podle diskriminátoru nerozlišitelné od skutečných dat. Tato interakce je formalizována jako minimaxová hra, kde generátor usiluje o minimalizaci pravděpodobnosti, že diskriminátor správně identifikuje generované vzorky, zatímco diskriminátor usiluje o maximalizaci své klasifikační přesnosti. GAN jsou známé zejména pro svou schopnost generovat syntézy obrazu nebo text na obraz.
+
+Navzdory své účinnosti se GAN potýkají s problémy, jako je zhroucení režimu, kdy generátor vytváří omezené množství vzorků, a nestabilita trénování.
+
+\newpage
+
+\section{Reinforcement Learning}
+\uv{Zpětnovazebné učení}(RL) \cite{Sutton1998} je paradigma strojového učení inspirované behavioristickou psychologií, zejména procesem, při kterém se lidé a zvířata učí činit rozhodnutí na základě odměn (pozitivních nebo negativních) ze svého okolí. Na rozdíl od učení pod dohledem, kdy jsou poskytovány příklady správného chování, funguje posilovací učení prostřednictvím interakce mezi agentem a jeho prostředím, podobně jako evoluční přístupy učení. V každém čase \textit{t} se agent nachází v určitém stavu \textit{s} a musí zvolit akci \textit{a} z množiny možných akcí, které jsou v tomto stavu k dispozici. V reakci na to prostředí poskytuje okamžitou odměnu \textit{r}. V průběhu času se agent díky neustálé interakci s prostředím naučí vybírat akce, které maximalizují kumulativní odměnu, kterou obdrží. RL bylo zkoumáno z různých akademických hledisek, včetně operačního výzkumu, teorie her, teorie informace a genetických algoritmů. Efektivně se využívá ve scénářích, které vyžadují rovnováhu mezi dlouhodobými a krátkodobými odměnami, například v aplikacích pro řízení robotů.
+
+Cílem agenta při RL učení je určit takovou politiku ($\pi$), která maximalizuje dlouhodobou odměnu, například očekávanou kumulativní odměnu. Politika je strategie, kterou agent používá k výběru akcí na základě svého aktuálního stavu. Pokud je známa nebo naučena hodnotová funkce akcí, je optimální politika ($\pi^*$) určena výběrem akce s nejvyšší hodnotou. Interakce mezi agentem a prostředím probíhají v diskrétních časových krocích a jsou modelovány jako Markovův rozhodovací proces (MDP). MDP je definován takto:
+\begin{itemize}
+	\item \textbf{S}: Soubor stavů \(\{s_1, \ldots, s_n\}\), které představují různé podmínky prostředí na základě informací agenta.
+	\item \textbf{A}: Množina akcí \(\{a_1, \ldots, a_m\}\), představující možné akce, které může agent provést v každém stavu.
+	\item \textbf{P(s, $s^*$, a)}: Pravděpodobnost přechodu ze stavu \textit{s} do stavu ($s^*$) při dané akci \textit{a} podle Markovovy vlastnosti, která znamená, že budoucí stavy závisí pouze na aktuálním stavu.
+	\item \textbf{R(s, $s^*$, a)}: Funkce odměny, která poskytuje okamžitou odměnu \textit{r} získanou při přechodu ze stavu \textit{s} do stavu ($s^*$) po provedení akce \textit{a}.
+\end{itemize}
+
+\newpage
+
+\begin{figure}[ht]
+\includegraphics[scale=0.75]{2-8.png}
+\centering
+\caption{Jednoduchá vizualizace RL myšlení. \cite{Roussol1994}}
+\label{obrRL}
+\end{figure}
+
+Model světa při RL je definován pomocí \textbf{P} a \textbf{R}, které představují dynamiku prostředí a dlouhodobé odměny spojené s každou politikou. Pokud je model světa znám, není třeba odhadovat pravděpodobnosti přechodu nebo funkce odměn, což umožňuje vypočítat optimální politiku přímo pomocí technik založených na modelu, jako je dynamické programování. Pokud však model světa není znám, je třeba přechodové funkce a funkce odměn aproximovat pomocí naučených odhadů budoucích odměn za provedení akce \textit{a} ve stavu \textit{s}. Politika se pak odvozuje z těchto odhadů. Tento proces učení usnadňují bezmodelové metody, jako je prohledávání Monte Carlo a učení pomocí časových rozdílů.
+
+\subsection{Základní pojmy}
+Klíčovou výzvou v RL je dosažení správné rovnováhy mezi \textbf{využíváním} aktuálně získaných znalostí a \textbf{prozkoumáváním} neprobádaných oblastí v rámci prohledávaného prostoru. Strategie, které se spoléhají pouze na náhodný výběr akce nebo vždy vybírají akci s nejvyšší vnímanou odměnou mají tendenci dosahovat ve stochastických prostředích špatných výsledků. Pro řešení této rovnováhy byly navrženy různé metody, přičemž jednou z nejúčinnějších a nejpoužívanějších je strategie $\epsilon$-greedy. Tento přístup, řízený parametrem $\epsilon \in$ [0,1], nařizuje, že agent RL vybírá akci, u níž očekává, že přinese nejvyšší budoucí odměnu s pravděpodobností 1-$\epsilon$, zatímco s pravděpodobností $\epsilon$ vybírá akci náhodně.
+
+Problémy RL lze rozdělit na \textbf{epizodické} a \textbf{inkrementální} typy. V epizodickém RL je algoritmus trénován offline v rámci konečného horizontu, který zahrnuje více trénovacích instancí. Posloupnost stavů, akcí a signálů odměn shromážděných v tomto konečném období se označuje jako epizoda. Příkladem epizodického RL jsou metody Monte Carlo, které se spoléhají na opakované náhodné vzorkování. Naopak v inkrementálním RL učení probíhá online, aniž by bylo omezeno konkrétním horizontem. Významným příkladem algoritmů v rámci kategorie inkrementálního RL je učení pomocí časového rozdílu (Temporal Difference, TD).
+
+Dalším důležitým rozdílem v posilování učení (RL) je rozdíl mezi algoritmy \textbf{off-policy} a \textbf{on-policy}. Off-policy aproximuje optimální politiku nezávisle na konkrétních akcích agenta. Například, jak si řekneme v další kapitole, Q-learning je off-policy algoritmus, protože odhaduje očekávaný výnos pro dvojice stav-akce za předpokladu, že je dodržována chamtivá politika. Naproti tomu algoritmus RL on-policy aproximuje politiku ve spojení s akcemi agenta, a to i během fází průzkumu.
+
+A nyní poslední dva pojmy. \textbf{Bootstrapping} je klíčový koncept v RL, který rozlišuje algoritmy podle toho, jak optimalizují hodnoty stavu. Zahrnuje aktualizaci odhadu hodnoty stavu pomocí odhadů následujících stavů, což umožňuje průběžné zpřesňování. Jak učení pomocí časového rozdílu (Temporal Difference, TD), tak dynamické programování využívají bootstrapping k aktualizaci hodnot stavu na základě zkušeností. Oproti tomu metody Monte Carlo nepoužívají bootstrapping a místo toho se učí každou hodnotu stavu nezávisle. V RL je klíčový koncept \textbf{zálohování}, který zahrnuje práci zpětně od budoucího stavu k aktuálnímu stavu a zahrnuje mezistavy. Operace zálohování se liší hloubkou, od jednoho kroku až po úplné zálohování, a rozsahem, od několika vybraných vzorových stavů až po komplexní analýzu.
+
+Na základě výše uvedených kritérií lze identifikovat tři hlavní typy algoritmů posilování učení:
+\begin{enumerate}
+	\item Dynamické programování:
+	\begin{itemize}
+		\item Vyžaduje znalost modelu světa (P a R) a počítá optimální politiku pomocí bootstrappingu. 
+	\end{itemize} 
+	\item Monte Carlo metody:
+	\begin{itemize}
+		\item Nevyžadují znalost modelu světa. Algoritmy této kategorie, jako je například Monte Carlo Tree Search (MCTS), jsou vhodné pro offline (epizodické) trénování a učí se pomocí zálohování v rozsahu vzorku a plné hloubky. Na rozdíl od jiných metod techniky Monte Carlo nepoužívají bootstrapping.
+	\end{itemize}
+	\item Temporal Difference učení:
+	\begin{itemize}
+		\item Podobně jako u metod Monte Carlo není vyžadována znalost modelu světa a je třeba jej odhadnout. Algoritmy tohoto typu, jako je Q-learning, se učí ze zkušeností pomocí bootstrappingu a různých záložních technik.
+	\end{itemize}
+\end{enumerate}

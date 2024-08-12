@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  12 MAY 2024 09:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  12 AUG 2024 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -521,7 +521,7 @@ LaTeX Info: Redefining \nameref on input line 99.
 \openout3 = `"Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.out"'.
 
 \c@lstlisting=\count309
-<./Zadani+Grafika/symbol_cvut_konturova_verze_cb.pdf, id=131, 126.78566pt x 96.
+<./Zadani+Grafika/symbol_cvut_konturova_verze_cb.pdf, id=151, 126.78566pt x 96.
 54268pt>
 File: ./Zadani+Grafika/symbol_cvut_konturova_verze_cb.pdf Graphic file (type pd
 f)
@@ -536,7 +536,7 @@ ni+Grafika/symbol_cvut_konturova_verze_cb.pdf>] [2
 
 
 ]
-<./Zadani+Grafika/Zadani.pdf, id=148, 597.23125pt x 844.15375pt>
+<./Zadani+Grafika/Zadani.pdf, id=168, 597.23125pt x 844.15375pt>
 File: ./Zadani+Grafika/Zadani.pdf Graphic file (type pdf)
 <use ./Zadani+Grafika/Zadani.pdf>
 Package pdftex.def Info: ./Zadani+Grafika/Zadani.pdf  used on input line 146.
@@ -545,7 +545,7 @@ File: ./Zadani+Grafika/Zadani.pdf Graphic file (type pdf)
 <use ./Zadani+Grafika/Zadani.pdf>
 Package pdftex.def Info: ./Zadani+Grafika/Zadani.pdf  used on input line 146.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
-<./Zadani+Grafika/Zadani.pdf, id=151, page=1, 597.23125pt x 844.15375pt>
+<./Zadani+Grafika/Zadani.pdf, id=171, page=1, 597.23125pt x 844.15375pt>
 File: ./Zadani+Grafika/Zadani.pdf Graphic file (type pdf)
 <use ./Zadani+Grafika/Zadani.pdf, page 1>
 Package pdftex.def Info: ./Zadani+Grafika/Zadani.pdf , page1 used on input line
@@ -580,16 +580,16 @@ Overfull \hbox (27.72pt too wide) in paragraph at lines 217--236
 [][] 
  []
 
-[6] (./Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.toc)
+[6] (./Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.toc [7
+
+])
 \tf@toc=\write4
 \openout4 = `"Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.toc"'.
 
- [7
+ [8]
+(./Kapitoly/Uvod/Uvod.tex) [9
 
-] [8
-
-]
-(./Kapitoly/Uvod/Uvod.tex) [9] [10
+] [10
 
 ]
 Kapitola 1.
@@ -603,7 +603,7 @@ Package hyperref Warning: Glyph not defined in PU encoding,
 (hyperref)                removing `\crqq' on input line 32.
 
 [14]
-<./Kapitoly/1/Obrazky//1-1.png, id=261, 352.31625pt x 302.12875pt>
+<./Kapitoly/1/Obrazky//1-1.png, id=290, 352.31625pt x 302.12875pt>
 File: ./Kapitoly/1/Obrazky//1-1.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-1.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-1.png  used on input line 60.
@@ -614,7 +614,7 @@ Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-1.png  used on input line 60.
                                                   \__shipout_drop_firstpage_...
 l.66 \newpage
               <./Kapitoly/1/Obrazky//1-1.png>] [16]
-<./Kapitoly/1/Obrazky//1-2.png, id=285, 603.25375pt x 299.1175pt>
+<./Kapitoly/1/Obrazky//1-2.png, id=314, 603.25375pt x 299.1175pt>
 File: ./Kapitoly/1/Obrazky//1-2.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-2.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-2.png  used on input line 92.
@@ -634,7 +634,7 @@ Package hyperref Warning: Glyph not defined in PU encoding,
                                                   \__shipout_drop_firstpage_...
 l.103 \newpage
                <./Kapitoly/1/Obrazky//1-2.png>]
-<./Kapitoly/1/Obrazky//1-3.png, id=294, 631.35875pt x 367.3725pt>
+<./Kapitoly/1/Obrazky//1-3.png, id=324, 631.35875pt x 367.3725pt>
 File: ./Kapitoly/1/Obrazky//1-3.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-3.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-3.png  used on input line 112.
@@ -646,7 +646,7 @@ Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-3.png  used on input line 112.
                                                   \__shipout_drop_firstpage_...
 l.119 \newpage
                <./Kapitoly/1/Obrazky//1-3.png>] [19] [20]
-<./Kapitoly/1/Obrazky//1-4.png, id=322, 634.37pt x 545.03625pt>
+<./Kapitoly/1/Obrazky//1-4.png, id=351, 634.37pt x 545.03625pt>
 File: ./Kapitoly/1/Obrazky//1-4.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-4.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-4.png  used on input line 148.
@@ -661,7 +661,7 @@ Underfull \vbox (badness 2608) has occurred while \output is active []
                                                   \__shipout_drop_firstpage_...
 l.159 
        <./Kapitoly/1/Obrazky//1-4.png>]
-<./Kapitoly/1/Obrazky//1-5.png, id=332, 843.15pt x 474.27188pt>
+<./Kapitoly/1/Obrazky//1-5.png, id=361, 843.15pt x 474.27188pt>
 File: ./Kapitoly/1/Obrazky//1-5.png Graphic file (type png)
 <use ./Kapitoly/1/Obrazky//1-5.png>
 Package pdftex.def Info: ./Kapitoly/1/Obrazky//1-5.png  used on input line 165.
@@ -677,7 +677,7 @@ l.171 \newpage
 ]
 Kapitola 2.
 (./Kapitoly/2/2.tex [25] [26]
-<./Kapitoly/2/Obrazky//2-1.png, id=369, 215.1293pt x 106.2201pt>
+<./Kapitoly/2/Obrazky//2-1.png, id=398, 215.1293pt x 106.2201pt>
 File: ./Kapitoly/2/Obrazky//2-1.png Graphic file (type png)
 <use ./Kapitoly/2/Obrazky//2-1.png>
 Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-1.png  used on input line 39.
@@ -688,7 +688,7 @@ Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-1.png  used on input line 39.
                                                   \__shipout_drop_firstpage_...
 l.57 \newpage
               <./Kapitoly/2/Obrazky//2-1.png>]
-<./Kapitoly/2/Obrazky//2-2.png, id=384, 374.5995pt x 323.40825pt>
+<./Kapitoly/2/Obrazky//2-2.png, id=413, 374.5995pt x 323.40825pt>
 File: ./Kapitoly/2/Obrazky//2-2.png Graphic file (type png)
 <use ./Kapitoly/2/Obrazky//2-2.png>
 Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-2.png  used on input line 64.
@@ -699,7 +699,7 @@ Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-2.png  used on input line 64.
                                                   \__shipout_drop_firstpage_...
 l.70 \newpage
               <./Kapitoly/2/Obrazky//2-2.png>] [29]
-<./Kapitoly/2/Obrazky//2-3.png, id=412, 251.43938pt x 154.32657pt>
+<./Kapitoly/2/Obrazky//2-3.png, id=441, 251.43938pt x 154.32657pt>
 File: ./Kapitoly/2/Obrazky//2-3.png Graphic file (type png)
 <use ./Kapitoly/2/Obrazky//2-3.png>
 Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-3.png  used on input line 105.
@@ -710,52 +710,124 @@ Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-3.png  used on input line 105.
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.111 \newpage
-               <./Kapitoly/2/Obrazky//2-3.png>]
+               <./Kapitoly/2/Obrazky//2-3.png>] [31]
+<./Kapitoly/2/Obrazky//2-4.png, id=463, 1204.5pt x 521.95pt>
+File: ./Kapitoly/2/Obrazky//2-4.png Graphic file (type png)
+<use ./Kapitoly/2/Obrazky//2-4.png>
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-4.png  used on input line 136.
 
-Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 117.
+(pdftex.def)             Requested size: 421.58131pt x 182.68523pt.
 
-
-Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 117.
-
-[31]
-
-Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 122.
-
-
-Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 122.
-
-[32]
-Overfull \hbox (25.214pt too wide) in paragraph at lines 127--127
-[]\T1/cmr/bx/n/17.28 ^^RZp•tnovazebnÈ u£enÌ^^P ne-boli Re-in-for-ce-ment Lear-
+Overfull \hbox (1.61908pt too wide) in paragraph at lines 142--143
+[]\T1/cmr/m/n/12 Podobn• jako kla-si-fi-kace za-hr-nuje shlu-ko-v·nÌ p∞i-∞a-zen
+Ì dat ke t∞Ì-d·m, nicmÈn• zna£ky
  []
 
+[32pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.162 \newpage
+               <./Kapitoly/2/Obrazky//2-4.png>] [33]
+<./Kapitoly/2/Obrazky//2-5.png, id=486, 1927.2pt x 1227.58624pt>
+File: ./Kapitoly/2/Obrazky//2-5.png Graphic file (type png)
+<use ./Kapitoly/2/Obrazky//2-5.png>
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-5.png  used on input line 202.
+
+(pdftex.def)             Requested size: 385.43318pt x 245.5129pt.
+ [34]
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\clqq' on input line 127.
+(hyperref)                removing `\clqq' on input line 212.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\crqq' on input line 127.
+(hyperref)                removing `\crqq' on input line 212.
 
-) [33] [34
+<./Kapitoly/2/Obrazky//2-6.png, id=498, 362.10281pt x 256.70906pt>
+File: ./Kapitoly/2/Obrazky//2-6.png Graphic file (type png)
+<use ./Kapitoly/2/Obrazky//2-6.png>
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-6.png  used on input line 216.
+
+(pdftex.def)             Requested size: 362.10191pt x 256.70842pt.
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.222 \newpage
+               <./Kapitoly/2/Obrazky//2-5.png>] [36pdfTeX warning (ext4): desti
+nation with the same identifier (name{figure.2.6}) has been already used, dupli
+cate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.229 \newpage
+               <./Kapitoly/2/Obrazky//2-6.png>] [37] [38]
+<./Kapitoly/2/Obrazky//2-7.png, id=528, 579.16376pt x 254.9525pt>
+File: ./Kapitoly/2/Obrazky//2-7.png Graphic file (type png)
+<use ./Kapitoly/2/Obrazky//2-7.png>
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-7.png  used on input line 261.
+
+(pdftex.def)             Requested size: 434.37175pt x 191.21388pt.
+
+Overfull \hbox (7.58041pt too wide) in paragraph at lines 261--263
+ [][] 
+ []
+
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.267 \newpage
+               <./Kapitoly/2/Obrazky//2-7.png>] [40] [41]
+<./Kapitoly/2/Obrazky//2-8.png, id=548, 670.30424pt x 281.25075pt>
+File: ./Kapitoly/2/Obrazky//2-8.png Graphic file (type png)
+<use ./Kapitoly/2/Obrazky//2-8.png>
+Package pdftex.def Info: ./Kapitoly/2/Obrazky//2-8.png  used on input line 291.
+
+(pdftex.def)             Requested size: 502.72696pt x 210.93753pt.
+
+Overfull \hbox (75.93562pt too wide) in paragraph at lines 291--293
+ [][] 
+ []
+
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.303 
+       <./Kapitoly/2/Obrazky//2-8.png>]) [43] [44
 
 ]
 Kapitola 3.
-(./Kapitoly/3/3.tex [35] [36] [37]) [38]
+(./Kapitoly/3/3.tex [45] [46] [47]
+Overfull \hbox (1.38036pt too wide) in paragraph at lines 76--77
+\T1/cmr/m/n/12 Deep Q-Learning (DQN)[[]][[]] je roz-≤Ì-∞e-nÌm tra-di£-nÌho al-g
+o-ritmu Q-Learning, kterÈ
+ []
+
+
+Overfull \hbox (1.32846pt too wide) in paragraph at lines 90--91
+[]\T1/cmr/m/n/12 NastavenÌ \T1/cmr/bx/n/12 p∞e-hr·-va-cÌho bu-f-feru \T1/cmr/m/
+n/12 pro ucho-v·-v·nÌ mi-nu-losti agenta. Tento
+ []
+
+[48]
+Overfull \hbox (0.68913pt too wide) in paragraph at lines 115--116
+[]\T1/cmr/bx/n/12 Periodick· ak-tu-a-li-zace\T1/cmr/m/n/12 : Pe-ri-o-dicky ak-t
+u-a-li-zujte v·hy cÌ-lovÈ sÌt•
+ []
+
+[49]) [50]
 Kapitola 4.
-(./Kapitoly/4/4.tex [39
+(./Kapitoly/4/4.tex) [51
 
-] [40] [41]) [42
+] [52] (./Kapitoly/Zaver/Zaver.tex) [53
 
-] (./Kapitoly/Zaver/Zaver.tex) [43]
-[44
+] [54
 
 
-] (./Citace/Citace.tex
+]
+(./Citace/Citace.tex
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
 .
 
@@ -803,7 +875,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 780429055058-[]6 /
  []
 
-[45]
+[55]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 []$\T1/cmtt/m/n/12 https : / / en . wikipedia . org / w / index . php ? title =
  Tree _ traversal & oldid =
@@ -839,42 +911,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 guide / 2017 / 10 / 9 /
  []
 
-[46])
-Underfull \hbox (badness 10000) in paragraph at lines 74--287
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 []\T1/cmr/m/n/12 BOHRA, Aman. \T1/cmr/m/it/12 CLAS-SI-FI-CATION BY DE-CI-SION T
 REE IN-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--287
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 \T1/cmr/m/it/12 DUCTION\T1/cmr/m/n/12 . On-line. In: SPPU BE Com-pu-ter La-bo-r
 a-tory(I,II,III,IV)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--287
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 \T1/cmr/m/n/12 And Pro-ject RE-LA-TED STUDY MA-TE-RIAL. 2016. Do-stupnÈ
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--287
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 \T1/cmr/m/n/12 z: []$\T1/cmtt/m/n/12 https : / / becomputerlaboratory . blogspo
 t . com / 2016 / 10 /
  []
 
-[47] (./Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.aux)
+
+Underfull \hbox (badness 1102) in paragraph at lines 80--81
+[]\T1/cmr/m/n/12 ROHIT, M. \T1/cmr/m/it/12 In-tro-duction to Un-su-per-vi-sed L
+ear-ning\T1/cmr/m/n/12 . On-line. In: Bom-bay
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 80--81
+\T1/cmr/m/n/12 Soft-wares. 2023. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / / ww
+w . bombaysoftwares . com / blog /
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 83--84
+\T1/cmr/m/n/12 5, £. 1, s. 281-297. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / /
+ projecteuclid . org / ebooks /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/cmtt/m/n/12 berkeley-[]symposium-[]on-[]mathematical-[]statistics-[]and-[]p
+robability /
+ []
+
+
+Overfull \hbox (64.86882pt too wide) in paragraph at lines 83--84
+\T1/cmtt/m/n/12 Proceedings-[]of-[]the-[]Fifth-[]Berkeley-[]Symposium-[]on-[]Ma
+thematical-[]Statistics-[]and /
+ []
+
+
+Overfull \hbox (107.58327pt too wide) in paragraph at lines 83--84
+\T1/cmtt/m/n/12 chapter / Some-[]methods-[]for-[]classification-[]and-[]analysi
+s-[]of-[]multivariate-[]observations /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+\T1/cmtt/m/n/12 / / en . wikipedia . org / w / index . php ? title = Dendrogram
+ & oldid = 1195077958$[]\T1/cmr/m/n/12 .
+ []
+
+[57]
+Underfull \hbox (badness 2894) in paragraph at lines 101--102
+[]\T1/cmr/m/n/12 GOODFELLOW, Ian; POUGET-ABADIE, Jean; MIRZA, Mehdi; XU,
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 111--112
+[]\T1/cmr/m/n/12 ROUSSO, Pat; SAM-SAM, Sa-naz a CHHABRA, Ro-bin. \T1/cmr/m/it/1
+2 A Mis-sion Ar-
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 111--112
+\T1/cmr/m/it/12 chi-tecture for On-Orbit Ser-vi-cing In-dustri-a-li-zation\T1/c
+mr/m/n/12 . 2021, s. 1-14. DOI
+ []
+
+) [58] (./Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.aux)
 Package rerunfilecheck Info: File `"Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch
  agent≈Ø".out' has not changed.
-(rerunfilecheck)             Checksum: C4657F6E1F8A56F990C344B6C3C4CE0D;6393.
+(rerunfilecheck)             Checksum: 01A5E14B6BF3C4AAE72EAF2ACE3AA32A;7270.
  ) 
 Here is how much of TeX's memory you used:
- 13377 strings out of 480437
- 199145 string characters out of 5898174
- 537468 words of memory out of 5000000
- 30654 multiletter control sequences out of 15000+600000
- 419571 words of font info for 60 fonts, out of 8000000 for 9000
+ 13525 strings out of 480437
+ 201474 string characters out of 5898174
+ 538431 words of memory out of 5000000
+ 30722 multiletter control sequences out of 15000+600000
+ 420944 words of font info for 62 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
- 72i,17n,80p,1269b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,17n,80p,1401b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Programs/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 }{c:/Programs/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }<c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -883,23 +1014,25 @@ Here is how much of TeX's memory you used:
 <c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 c:/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:
 /Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:
-/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/
-Programs/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/P
-rograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/Pr
-ograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/Pro
-grams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/Prog
-rams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/Progr
-ams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/Progra
-ms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/Program
-s/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/Programs
-/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/Programs/
-texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/Programs/t
-exlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.pdf" (47
- pages, 1663708 bytes).
+/Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/
+Programs/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/P
+rograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/Pr
+ograms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/Pro
+grams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/Prog
+rams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/Progr
+ams/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/Progra
+ms/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/Program
+s/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/Programs
+/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/Programs/
+texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/Programs/t
+exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/Programs/te
+xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/Programs/tex
+live/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on "Strojov√© uƒçen√≠ pro adaptaci autonomn√≠ch agent≈Ø.pdf" (58
+ pages, 2229022 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 539 compressed objects within 6 object streams
- 134 named destinations out of 1000 (max. 500000)
- 322 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 856 PDF objects out of 1000 (max. 8388607)
+ 716 compressed objects within 8 object streams
+ 207 named destinations out of 1000 (max. 500000)
+ 387 words of extra memory for PDF output out of 10000 (max. 10000000)
 

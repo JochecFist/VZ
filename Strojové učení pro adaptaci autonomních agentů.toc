@@ -19,17 +19,27 @@
 \contentsline {subsubsection}{Support Vector Machine(Metoda podpůrných vektorů)}{27}{section*.3}%
 \contentsline {subsection}{\numberline {2.1.2}Regrese}{30}{subsection.2.1.2}%
 \contentsline {subsubsection}{Decision Trees(Rozhodovací stromy)}{30}{section*.4}%
-\contentsline {section}{\numberline {2.2}\uv {Učení bez učitele} neboli Unsupervised ML}{31}{section.2.2}%
-\contentsline {section}{\numberline {2.3}\uv {Částečně řízené učení} neboli Semi-Supervised ML}{32}{section.2.3}%
-\contentsline {section}{\numberline {2.4}\uv {Zpětnovazebné učení} neboli Reinforcement Learning}{33}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Návrh autonomního agenta}{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Prostředí pro agenta}{35}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Různé algoritmy pro učení agenta}{36}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Pomocí SARSA (State-Action-Reward-State-Action)}{37}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Pomocí Deep Q-Learning}{38}{subsection.3.2.2}%
-\contentsline {chapter}{\numberline {4}Různé návrhy hodnocení agenta}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Podle efektivnosti zabití nepřátel}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Podle efektivnosti přežití}{40}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Efektivita zabití + přežití}{41}{section.4.3}%
-\contentsline {chapter}{Závěr}{43}{chapter*.5}%
-\contentsline {chapter}{Literatura}{44}{chapter*.5}%
+\contentsline {section}{\numberline {2.2}Unsupervised Machine Learning}{31}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Shlukování}{31}{subsection.2.2.1}%
+\contentsline {subsubsection}{K-means shlukování}{33}{section*.5}%
+\contentsline {subsubsection}{Hierarchické shlukování}{34}{section*.6}%
+\contentsline {subsection}{\numberline {2.2.2}\uv {Těžba častých vzorů} neboli asociace(FPM)}{35}{subsection.2.2.2}%
+\contentsline {subsubsection}{Apriori}{36}{section*.7}%
+\contentsline {subsubsection}{Zobecněné sekvenční vzory(GSP)}{37}{section*.8}%
+\contentsline {section}{\numberline {2.3}Semi-Supervised Machine Learning}{39}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Generativní adverzní síť (GAN)}{39}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Reinforcement Learning}{41}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Základní pojmy}{42}{subsection.2.4.1}%
+\contentsline {chapter}{\numberline {3}Návrh autonomního agenta}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Prostředí pro agenta}{45}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Vhodné algoritmy pro vytvoření agenta v akční hře}{46}{section.3.2}%
+\contentsline {subsubsection}{Q-Learning}{46}{section*.9}%
+\contentsline {subsection}{\numberline {3.2.1}Pomocí SARSA (State-Action-Reward-State-Action)}{46}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Pomocí Deep Q-Learning}{48}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Rozdíly mezi těmito algoritmy a použití pro herní AI}{50}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}Návrhy hodnocení agenta}{51}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Podle efektivnosti zabití nepřátel}{51}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Podle efektivnosti přežití}{51}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Efektivita zabití + přežití}{52}{section.4.3}%
+\contentsline {chapter}{Závěr}{53}{chapter*.10}%
+\contentsline {chapter}{Literatura}{54}{chapter*.10}%
