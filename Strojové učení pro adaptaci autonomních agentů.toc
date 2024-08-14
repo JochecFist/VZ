@@ -29,17 +29,19 @@
 \contentsline {section}{\numberline {2.3}Semi-Supervised Machine Learning}{39}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Generativní adverzní síť (GAN)}{39}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Reinforcement Learning}{41}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Základní pojmy}{42}{subsection.2.4.1}%
 \contentsline {chapter}{\numberline {3}Návrh autonomního agenta}{45}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Prostředí pro agenta}{45}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Vhodné algoritmy pro vytvoření agenta v akční hře}{46}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Algoritmy pro vytvoření agenta v akční hře}{46}{section.3.2}%
 \contentsline {subsubsection}{Q-Learning}{46}{section*.9}%
-\contentsline {subsection}{\numberline {3.2.1}Pomocí SARSA (State-Action-Reward-State-Action)}{46}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Pomocí Deep Q-Learning}{48}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Rozdíly mezi těmito algoritmy a použití pro herní AI}{50}{subsection.3.2.3}%
-\contentsline {chapter}{\numberline {4}Návrhy hodnocení agenta}{51}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Podle efektivnosti zabití nepřátel}{51}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Podle efektivnosti přežití}{51}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Efektivita zabití + přežití}{52}{section.4.3}%
-\contentsline {chapter}{Závěr}{53}{chapter*.10}%
-\contentsline {chapter}{Literatura}{54}{chapter*.10}%
+\contentsline {subsection}{\numberline {3.2.1}SARSA (State-Action-Reward-State-Action)}{46}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Deep Q-Learning}{48}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Rozdíly mezi těmito algoritmy}{50}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Použití obou algoritmů pro vytvoření agenta}{50}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}Návrh hodnocení agenta}{51}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Metodika hodnocení}{51}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Typy hodnocení}{53}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Podle efektivnosti zabití nepřátel}{53}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Podle efektivnosti přežití}{53}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Efektivita zabití + přežití}{53}{subsection.4.2.3}%
+\contentsline {chapter}{Závěr}{55}{chapter*.10}%
+\contentsline {chapter}{Literatura}{56}{chapter*.10}%

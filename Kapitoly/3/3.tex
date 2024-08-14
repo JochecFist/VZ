@@ -5,11 +5,11 @@ V Unreal Engine vytvoříme mapu, která bude obsahovat část rozpadlého měst
 
 Herní mapa bude obsahovat různorodé oblasti, jako např. otevřenější část, ale také uzavřenější část obklopenou budovami. Uzavřená oblast nabídne strategické výzvy a výhody, například krytí poskytované různými objekty, které lze takticky využít během střetů. Některé části mapy budou také obsahovat nebezpečné prvky, které mohou způsobit poškození, pokud se hráč nebo agenti přiblíží k tomuto nebezpečnému prvku.
 
-Přátelští ale i nepřátelští agenti po zničení odhodí předměty, které lze sebrat a hráči dokáží nějak pomoct. Hráč bude mít přístup k "náhlavnímu displeji" (HUD) na obrazovce, kde bude moct sledovat důležité informace o sobě, ale HUD také usnadní navigaci v hlavním menu a menu pauzy.
+Přátelští ale i nepřátelští agenti po zničení budou odhazovat různé předměty, které lze sebrat a hráči dokáží nějak pomoct. Hráč bude mít přístup k "náhlavnímu displeji" (HUD) na obrazovce, kde bude moct sledovat důležité informace o sobě, ale HUD také usnadní navigaci v hlavním menu a menu pauzy.
 
 \newpage
 
-\section{Vhodné algoritmy pro vytvoření agenta v akční hře}
+\section{Algoritmy pro vytvoření agenta v akční hře}
 Oba algoritmy jsou založené na Q-Learning algoritmu.
 \subsubsection{Q-Learning}
 Q-Learning\cite{Watkins1992} je populární algoritmus RL, který se používá k určení optimální politiky výběru akce pro agenta, který reaguje na prostředí. Pracuje v diskrétních časových krocích a jeho cílem je naučit se optimální politiku iterativní aktualizací hodnot Q, které představují očekávanou užitečnost provedení určité akce v daném stavu.
@@ -23,7 +23,7 @@ Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s,
 
 Zde $\alpha$ je míra učení, $\gamma$ je diskontní faktor, \textit{r} je získaná odměna a \textit{s'} je nový stav. Výraz \textit{$\max_{a'} Q(s', a'$)} představuje maximální odhadovanou budoucí odměnu za nový stav. Tímto procesem se Q-Learning snaží konvergovat k optimálním hodnotám Q, z nichž lze odvodit optimální politiku výběrem akcí s nejvyššími hodnotami Q pro každý stav.
 
-\subsection{Pomocí SARSA (State-Action-Reward-State-Action)}
+\subsection{SARSA (State-Action-Reward-State-Action)}
 \textbf{SARSA}(Stav-Akce-Odměna-Stav-Akce)\cite{Sutton1998} je RL algoritmus na základě politiky, který se používá k nalezení optimální politiky pro agenta, který interaguje s prostředím. Název \uv{SARSA} je odvozen od posloupnosti událostí, které používá k aktualizaci hodnot Q: aktuální stav \textit{s}, akce provedená v tomto stavu \textit{a}, odměna získaná po provedení akce \textit{s}, další stav \textit{s'} a další akce provedená v novém stavu \textit{a'}.
 
 Jádrem metody SARSA je odhad funkce \textbf{Q-hodnoty}, \textit{Q(s, a)}, která představuje očekávanou kumulativní odměnu za provedení akce \textit{a} ve stavu \textit{s} a následné dodržování určité politiky. Na rozdíl od jiných algoritmů učení s posilováním, jako je Q-Learning, který je off-policy, je SARSA algoritmus on-policy. To znamená, že aktualizuje své hodnoty Q na základě akcí skutečně provedených agentem podle jeho aktuální politiky, včetně akcí průzkumu. 
@@ -72,7 +72,7 @@ SARSA se nejčastěji používá na automatické hraní her nebo v robotice mů�
 
 \newpage
 
-\subsection{Pomocí Deep Q-Learning}
+\subsection{Deep Q-Learning}
 Deep Q-Learning (DQN)\cite{Nuer2022}\cite{GfG2023} je rozšířením tradičního algoritmu Q-Learning, které je speciálně navrženo pro práci s komplexními prostředími s vysokodimenzionálními stavovými prostory, jaké se vyskytují například ve videohrách nebo v robotice. V klasickém Q-Learningu se k ukládání hodnot dvojic stav-akce používá Q-tabulka. Tento přístup se však stává nepraktickým, pokud se jedná o prostředí, kde je stavový prostor příliš velký na to, aby jej bylo možné explicitně reprezentovat. DQN toto omezení překonává využitím hlubokých neuronových sítí k aproximaci funkce Q, která mapuje stavy na hodnoty Q pro každou možnou akci. Takže namísto udržování velké tabulky hodnot Q se použije hluboká neuronová síť k předpovídání hodnot Q pro každou akci danou konkrétním stavem. Tato neuronová síť, často označovaná jako Q-síť, přijímá jako vstup aktuální stav prostředí a na výstupu má vektor Q-hodnot, jeden pro každou možnou akci. Akce s nejvyšší hodnotou Q je pak vybrána v souladu se zásadami.
 
 Trénování sítě Q spočívá v minimalizaci rozdílu mezi předpovídanou hodnotou Q a cílovou hodnotou Q, která se vypočítá pomocí Bellmanovy rovnice. Cílová hodnota Q se vypočítá jako součet okamžité odměny a diskontované maximální budoucí odměny, kterou odhaduje samotná Q-síť. To přináší problém nestability během trénování, protože cílová hodnota závisí také na vahách sítě. Ke zmírnění tohoto problému využívá metoda Deep Q-Learning dvě klíčové techniky: přehrávání minulosti a cílová síť. 
@@ -130,7 +130,7 @@ Kroky algoritmu DQN:
 
 \newpage
 
-\subsection{Rozdíly mezi těmito algoritmy a použití pro herní AI}
+\subsection{Rozdíly mezi těmito algoritmy}
 SARSA vs DQN:
 \begin{itemize}
 	\item \textbf{On-Policy vs Off-Policy:} SARSA aktualizuje Q-hodnoty na základě akcí prováděných současnou politikou, což vede k stabilnímu učení. DQN naopak používá přehrávání minulosti a cílové sítě pro stabilní a efektivní učení.
@@ -141,6 +141,7 @@ SARSA vs DQN:
      \item \textbf{Požadavky na výpočetní výkon:} DQN potřebuje značné výpočetní zdroje a čas. SARSA díky jednoduchosti je nenáročná.
 \end{itemize}
 
-Pro herní AI:
-\par\null\par
-DQN je obecně lépe přizpůsoben pro složité herní AI s velkými prostory stavů a různorodými scénáři díky jeho schopnosti efektivně řídit exploraci a využití a navíc zvládat složité prostředí prostřednictvím hlubokých neuronových sítí, ale SARSA stále může být použit v jednodušších nebo více kontrolovaných prostředích, kde jsou prostory stavů a akcí zvládnutelné, a kde jsou přednostmi stabilita a jednoduchost implementace před zvládáním komplexity.
+\subsection{Použití obou algoritmů pro vytvoření agenta}
+DQN je obecně lépe přizpůsoben pro složité herní AI s velkými prostory stavů a různorodými scénáři díky jeho schopnosti efektivně řídit exploraci a využití a navíc zvládat složité prostředí prostřednictvím hlubokých neuronových sítí, ale SARSA stále může být použit v jednodušších nebo více kontrolovaných prostředích, kde jsou prostory stavů a akcí zvládnutelné, a kde jsou přednostmi stabilita a jednoduchost implementace před zvládáním komplexity. 
+
+Díky těmto znalostem dostanou oba algoritmy tohoto agenta vlastní úkol. Agent se bude skládat z logiky na oblékání svých jednotek, kde se využije SARSA, protože je to velice kontrolované prostředí, kde se nemůže neustále náhodně měnit, bude mít algoritmus pouze předem určené množství různého vybavení, podle kterého bude moct sestrojit vojáky. Pro samotné AI, které se bude rozhodovat na bitevním poli, se použije Deep Q-Learning právě kvůli složitosti prostředí a neustále se měnícím podmínkám, které budou často mezi sebou neporovnatelné hlavně i díky hráčovi, který se bude zapojovat do bitev, protože hra bude z pohledu první osoby a nebude pouze ovládat svoje vojáky. Hráčovo vojáci nebudou obsahovat SARSA část logiky, protože hráč si bude sestavovat vojáky sám, ale stále jejich hlavní logika bude fungovat jako u nepřátelského AI pomocí Deep Q-Learning.
