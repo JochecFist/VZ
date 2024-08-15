@@ -73,15 +73,36 @@ SARSA se nejčastěji používá na automatické hraní her nebo v robotice mů�
 \newpage
 
 \subsection{Deep Q-Learning}
-Deep Q-Learning (DQN)\cite{Nuer2022}\cite{GfG2023} je rozšířením tradičního algoritmu Q-Learning, které je speciálně navrženo pro práci s komplexními prostředími s vysokodimenzionálními stavovými prostory, jaké se vyskytují například ve videohrách nebo v robotice. V klasickém Q-Learningu se k ukládání hodnot dvojic stav-akce používá Q-tabulka. Tento přístup se však stává nepraktickým, pokud se jedná o prostředí, kde je stavový prostor příliš velký na to, aby jej bylo možné explicitně reprezentovat. DQN toto omezení překonává využitím hlubokých neuronových sítí k aproximaci funkce Q, která mapuje stavy na hodnoty Q pro každou možnou akci. Takže namísto udržování velké tabulky hodnot Q se použije hluboká neuronová síť k předpovídání hodnot Q pro každou akci danou konkrétním stavem. Tato neuronová síť, často označovaná jako Q-síť, přijímá jako vstup aktuální stav prostředí a na výstupu má vektor Q-hodnot, jeden pro každou možnou akci. Akce s nejvyšší hodnotou Q je pak vybrána v souladu se zásadami.
+Deep Q-Learning (DQL)\cite{Nuer2022}\cite{GfG2023} je rozšířením tradičního algoritmu Q-Learning, které je speciálně navrženo pro práci s komplexními prostředími s vysokodimenzionálními stavovými prostory, jaké se vyskytují například ve videohrách nebo v robotice. V klasickém Q-Learningu se k ukládání hodnot dvojic stav-akce používá Q-tabulka. Tento přístup se však stává nepraktickým, pokud se jedná o prostředí, kde je stavový prostor příliš velký na to, aby jej bylo možné explicitně reprezentovat. DQL toto omezení překonává využitím hlubokých neuronových sítí k aproximaci funkce Q, která mapuje stavy na hodnoty Q pro každou možnou akci. Takže namísto udržování velké tabulky hodnot Q se použije hluboká neuronová síť k předpovídání hodnot Q pro každou akci danou konkrétním stavem. Tato neuronová síť, často označovaná jako Q-síť, přijímá jako vstup aktuální stav prostředí a na výstupu má vektor Q-hodnot, jeden pro každou možnou akci. Akce s nejvyšší hodnotou Q je pak vybrána v souladu se zásadami.
 
-Trénování sítě Q spočívá v minimalizaci rozdílu mezi předpovídanou hodnotou Q a cílovou hodnotou Q, která se vypočítá pomocí Bellmanovy rovnice. Cílová hodnota Q se vypočítá jako součet okamžité odměny a diskontované maximální budoucí odměny, kterou odhaduje samotná Q-síť. To přináší problém nestability během trénování, protože cílová hodnota závisí také na vahách sítě. Ke zmírnění tohoto problému využívá metoda Deep Q-Learning dvě klíčové techniky: přehrávání minulosti a cílová síť. 
+
+\begin{figure}[ht]
+\includegraphics[scale=0.45]{3-1.png}
+\centering
+\caption{Příklad architektury Deep Q-Learning(Google DeepMind)\cite{Elsayed2021}}
+\label{obrADQL}
+\end{figure}
+
+Trénování sítě Q spočívá v minimalizaci rozdílu mezi předpovídanou hodnotou Q a cílovou hodnotou Q, která se vypočítá pomocí Bellmanovy rovnice. Cílová hodnota Q se vypočítá jako součet okamžité odměny a diskontované maximální budoucí odměny, kterou odhaduje samotná Q-síť. To přináší problém nestability během trénování, protože cílová hodnota závisí také na vahách sítě. Ke zmírnění tohoto problému využívá metoda Deep Q-Learning dvě klíčové techniky: přehrávání minulosti a cílová síť.
+
+\newpage
 
 Přehrávání minulosti je metoda, při níž je minulost agenta, reprezentovaná jako tuply stavu, akce, odměny a dalšího stavu, ukládána do vyrovnávací paměti pro znovupoužití. Během tréninku se z této vyrovnávací paměti náhodně vybírají tuply, aby se přerušila korelace mezi po sobě jdoucími stavy, a tím se stabilizovalo učení. To umožňuje síti učit se z rozmanitějšího souboru, což zlepšuje celkovou robustnost politiky.
 
-Cílová síť je druhá síť DQN, která má identickou architekturu jako síť Q, ale její parametry se aktualizují méně často. Tato síť se používá k vytváření cílových hodnot Q, což zajišťuje, že aktualizace směřují ke stabilnějšímu cíli. Váhy cílové sítě jsou pravidelně aktualizovány kopírováním vah Q-sítě, což pomáhá dále stabilizovat proces učení.
+Cílová síť je druhá síť DQL, která má identickou architekturu jako síť Q, ale její parametry se aktualizují méně často. Tato síť se používá k vytváření cílových hodnot Q, což zajišťuje, že aktualizace směřují ke stabilnějšímu cíli. Váhy cílové sítě jsou pravidelně aktualizovány kopírováním vah Q-sítě, což pomáhá dále stabilizovat proces učení.
 
-Kroky algoritmu DQN:
+Na obrázku \ref{obrDNN} je vidět návrh sítě pro Deep Q-Learning, kde se nachází vstupní vrstva s 10 uzly, tři schované vrstvy, kde každá má 32 uzlů a nakonec jedna výstupní vrstva se 605 uzly, neboli jedna výstupní vrstva pro každou možnou akci. Vstupní a výstupní vrstvy používají lineární aktivační funkci a všechny schované vrstvy používají ReLu aktivační funkci.
+
+\begin{figure}[ht]
+\includegraphics[scale=1.2]{3-2.png}
+\centering
+\caption{Příklad návrhu sítě pro DQL.\cite{Vicente2021}}
+\label{obrDNN}
+\end{figure}
+
+\newpage
+
+Kroky algoritmu DQL:
 \begin{enumerate}
     \item \textbf{Inicializace}:
     \begin{itemize}
@@ -131,17 +152,17 @@ Kroky algoritmu DQN:
 \newpage
 
 \subsection{Rozdíly mezi těmito algoritmy}
-SARSA vs DQN:
+SARSA vs DQL:
 \begin{itemize}
-	\item \textbf{On-Policy vs Off-Policy:} SARSA aktualizuje Q-hodnoty na základě akcí prováděných současnou politikou, což vede k stabilnímu učení. DQN naopak používá přehrávání minulosti a cílové sítě pro stabilní a efektivní učení.
-     \item \textbf{Jednoduchost:} SARSA má snadnou implementaci a pochopení, vhodné pro malé prostory stavů a akcí. DQN naopak je složitější na implementaci a ladění.
-     \item \textbf{Explorace:} SARSA konzervativně exploruje a tím snižuje riziko nesprávného učení, ale má problém s vyvážením explorace a využitím. DQN zase lépe řídí vyvážení mezi explorací a využitím, ale může se špatně naučit.
-     \item \textbf{Tabulární omezení:} SARSA je nevhodné pro velké nebo kontinuální prostory stavů. DQN naopak dobře zvládá velké a kontinuální prostory stavy díky hlubokým neuronovým sítím.
-     \item \textbf{Potenciální suboptimálnost:} SARSA může konvergovat k suboptimálním politikám, pokud není explorace dobře řízena. DQN zase může trpět nestabilitou, i když pokročilé techniky mohou toto zmírnit.
-     \item \textbf{Požadavky na výpočetní výkon:} DQN potřebuje značné výpočetní zdroje a čas. SARSA díky jednoduchosti je nenáročná.
+	\item \textbf{On-Policy vs Off-Policy:} SARSA aktualizuje Q-hodnoty na základě akcí prováděných současnou politikou, což vede k stabilnímu učení. DQL naopak používá přehrávání minulosti a cílové sítě pro stabilní a efektivní učení.
+     \item \textbf{Jednoduchost:} SARSA má snadnou implementaci a pochopení, vhodné pro malé prostory stavů a akcí. DQL naopak je složitější na implementaci a ladění.
+     \item \textbf{Explorace:} SARSA konzervativně exploruje a tím snižuje riziko nesprávného učení, ale má problém s vyvážením explorace a využitím. DQL zase lépe řídí vyvážení mezi explorací a využitím, ale může se špatně naučit.
+     \item \textbf{Tabulární omezení:} SARSA je nevhodné pro velké nebo kontinuální prostory stavů. DQL naopak dobře zvládá velké a kontinuální prostory stavy díky hlubokým neuronovým sítím.
+     \item \textbf{Potenciální suboptimálnost:} SARSA může konvergovat k suboptimálním politikám, pokud není explorace dobře řízena. DQL zase může trpět nestabilitou, i když pokročilé techniky mohou toto zmírnit.
+     \item \textbf{Požadavky na výpočetní výkon:} DQL potřebuje značné výpočetní zdroje a čas. SARSA díky jednoduchosti je nenáročná.
 \end{itemize}
 
 \subsection{Použití obou algoritmů pro vytvoření agenta}
-DQN je obecně lépe přizpůsoben pro složité herní AI s velkými prostory stavů a různorodými scénáři díky jeho schopnosti efektivně řídit exploraci a využití a navíc zvládat složité prostředí prostřednictvím hlubokých neuronových sítí, ale SARSA stále může být použit v jednodušších nebo více kontrolovaných prostředích, kde jsou prostory stavů a akcí zvládnutelné, a kde jsou přednostmi stabilita a jednoduchost implementace před zvládáním komplexity. 
+DQL je obecně lépe přizpůsoben pro složité herní AI s velkými prostory stavů a různorodými scénáři díky jeho schopnosti efektivně řídit exploraci a využití a navíc zvládat složité prostředí prostřednictvím hlubokých neuronových sítí, ale SARSA stále může být použit v jednodušších nebo více kontrolovaných prostředích, kde jsou prostory stavů a akcí zvládnutelné, a kde jsou přednostmi stabilita a jednoduchost implementace před zvládáním komplexity. 
 
 Díky těmto znalostem dostanou oba algoritmy tohoto agenta vlastní úkol. Agent se bude skládat z logiky na oblékání svých jednotek, kde se využije SARSA, protože je to velice kontrolované prostředí, kde se nemůže neustále náhodně měnit, bude mít algoritmus pouze předem určené množství různého vybavení, podle kterého bude moct sestrojit vojáky. Pro samotné AI, které se bude rozhodovat na bitevním poli, se použije Deep Q-Learning právě kvůli složitosti prostředí a neustále se měnícím podmínkám, které budou často mezi sebou neporovnatelné hlavně i díky hráčovi, který se bude zapojovat do bitev, protože hra bude z pohledu první osoby a nebude pouze ovládat svoje vojáky. Hráčovo vojáci nebudou obsahovat SARSA část logiky, protože hráč si bude sestavovat vojáky sám, ale stále jejich hlavní logika bude fungovat jako u nepřátelského AI pomocí Deep Q-Learning.

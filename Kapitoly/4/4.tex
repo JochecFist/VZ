@@ -1,16 +1,26 @@
 \section{Metodika hodnocení}
-Hra bude rozdělena na kola, kde jedna hra se bude skládat z neurčitých počet kol. Hra je navržena tak, že bojuje hráč se svými vojáky proti nepřátelským vojakům, kteří jsou čistě řízeni autonomním agentem. Když hra začne, tak hráč si postaví vlastní vojáky, kteří mu budou pomáhat bojovat a zvítězit proti nepřátelským vojákům, kteří budou vytvořeni podle předem naučeného SARSA algoritmu. V průběhu kola se také předem naučená AI část vojáků, která by byla vytvořena za pomoci Deep Q-Learning algoritmu, bude v průběhu bitvy upravovat, aby se pokusili nepřátelští vojáci přelstít hráče a jeho vojáky a díky tomu je porazit. Na konci kola sesbírané informace hráč využije k tomu, zda chce nebo potřebuje upravit svoje vojáky na další kolo. Agent využije svoje nasbírané informace k úpravě SARSA algoritmu, aby dokázal vybrat efektivnější výbavu proti hráči. Nakonec tyto informace se pošlou do Deep Q-Learning algoritmu s informacemi z kola a upraví se tím chování vojáků, aby dokázali lépe a efektivněji porazit hráče a jeho vojáky. Pokud toto není konec hry, tak s těmito novými úpravami a novou výbavou začne další kolo. Tento cyklus se opakuje, dokud nenastane konec hry. Když konec hry nastane, tak se algoritmy revertují na svůj základní předem naučený stav.
+Hra bude rozdělena na kola, kde jedna hra se bude skládat z neurčitých počet kol. Hra je navržena tak, že bojuje hráč se svými vojáky proti nepřátelským vojakům, kteří jsou čistě řízeni autonomním agentem. Když hra začne, tak hráč si postaví vlastní vojáky, kteří mu budou pomáhat bojovat a zvítězit proti nepřátelským vojákům, kteří budou vytvořeni podle předem naučeného SARSA algoritmu. 
+
+V průběhu kola se také předem naučená AI část vojáků, která by byla vytvořena za pomoci Deep Q-Learning algoritmu, bude v průběhu bitvy upravovat(učit), aby se pokusili nepřátelští vojáci přelstít hráče a jeho vojáky a díky tomu je porazit. 
+
+Na konci kola sesbírané informace hráč využije k tomu, zda chce nebo potřebuje upravit svoje vojáky na další kolo. Agent využije svoje nasbírané informace k úpravě SARSA algoritmu, aby dokázal vybrat efektivnější výbavu proti hráči. Nakonec tyto informace se pošlou do Deep Q-Learning algoritmu s informacemi z kola a upraví se tím chování vojáků, aby dokázali lépe a efektivněji porazit hráče a jeho vojáky.
+
+Pokud toto není konec hry, tak s těmito novými úpravami a novou výbavou začne další kolo. Tento cyklus se opakuje, dokud nenastane konec hry. Když konec hry nastane, tak se algoritmy revertují na svůj základní předem naučený stav. Diagram logiky celé hry lze vidět na obrázku \ref{obrDiaLog}.
+
+Díky tomu, že v Deep Q-Learning algoritmu se používá hluboká neuronová síť(DNN), lze vyzkoušet různé neuronové sítě a zhodnotit, která z nich produkuje nejlepší výsledky a nejlepší herní zážitek. Po zjištění nejlepší DNN pro tento Deep Q-Learning algoritmus by šlo ještě zhodnotit, který z typů hodnocení, které jsou popsány v sekci \ref{TH}, by byl nejlepší pro herní zážitek. Díky tomu by vznikla nejlepší varianta agenta, proti kterému by bylo i zábavné bojovat.
 
 \newpage
 
 \begin{figure}[H]
 \includegraphics[scale=0.75]{4-1.png}
 \centering
-\caption{Diagram logiky hry, která byla popsaná výše.}
-\label{obrDiagram}
+\caption{Diagram logiky hry.}
+\label{obrDiaLog}
 \end{figure}
 
 \section{Typy hodnocení}
+\makeatletter\def\@currentlabel{4.2	Typy hodnocení}\makeatother
+\label{TH}
 Agenta lze hodnotit řadou způsobů, ale zvoleny byly tyto tři návrhy, protože budou mít největší asi i nejzajímavější efekt na chování agenta umělé inteligence:
 
 \subsection{Podle efektivnosti zabití nepřátel}

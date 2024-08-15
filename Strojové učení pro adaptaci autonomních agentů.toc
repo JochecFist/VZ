@@ -35,13 +35,13 @@
 \contentsline {subsubsection}{Q-Learning}{46}{section*.9}%
 \contentsline {subsection}{\numberline {3.2.1}SARSA (State-Action-Reward-State-Action)}{46}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Deep Q-Learning}{48}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Rozdíly mezi těmito algoritmy}{50}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Použití obou algoritmů pro vytvoření agenta}{50}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}Návrh hodnocení agenta}{51}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Metodika hodnocení}{51}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Typy hodnocení}{53}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Podle efektivnosti zabití nepřátel}{53}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Podle efektivnosti přežití}{53}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Efektivita zabití + přežití}{53}{subsection.4.2.3}%
-\contentsline {chapter}{Závěr}{55}{chapter*.10}%
-\contentsline {chapter}{Literatura}{56}{chapter*.10}%
+\contentsline {subsection}{\numberline {3.2.3}Rozdíly mezi těmito algoritmy}{51}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Použití obou algoritmů pro vytvoření agenta}{51}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}Návrh hodnocení agenta}{53}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Metodika hodnocení}{53}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Typy hodnocení}{55}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Podle efektivnosti zabití nepřátel}{55}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Podle efektivnosti přežití}{55}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Efektivita zabití + přežití}{55}{subsection.4.2.3}%
+\contentsline {chapter}{Závěr}{57}{chapter*.10}%
+\contentsline {chapter}{Literatura}{58}{chapter*.10}%
