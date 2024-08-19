@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1.4}AI ve 3D akčních hrách}{20}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Obecné úkoly AI}{20}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}F.E.A.R.}{20}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}ME: Shadow of Mordor a ME: Shadow of War}{22}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.3}ME: Shadow of Mordor a~ME: Shadow of War}{22}{subsection.1.4.3}%
 \contentsline {chapter}{\numberline {2}Strojové učení (Machine Learning - ML)}{25}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Supervised Machine Learning}{26}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Klasifikace}{27}{subsection.2.1.1}%
@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {2.4}Reinforcement Learning}{41}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Návrh autonomního agenta}{45}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Prostředí pro agenta}{45}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Algoritmy pro vytvoření agenta v akční hře}{46}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Algoritmy pro vytvoření agenta v~akční hře}{46}{section.3.2}%
 \contentsline {subsubsection}{Q-Learning}{46}{section*.9}%
 \contentsline {subsection}{\numberline {3.2.1}SARSA (State-Action-Reward-State-Action)}{46}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Deep Q-Learning}{48}{subsection.3.2.2}%
@@ -40,8 +40,8 @@
 \contentsline {chapter}{\numberline {4}Návrh hodnocení agenta}{53}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Metodika hodnocení}{53}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Typy hodnocení}{55}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Podle efektivnosti zabití nepřátel}{55}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Podle efektivnosti přežití}{55}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Efektivita zabití + přežití}{55}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.1}Podle efektivity zabití nepřátel}{55}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Podle efektivity přežití}{55}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Efektivita zabití a~přežití}{55}{subsection.4.2.3}%
 \contentsline {chapter}{Závěr}{57}{chapter*.10}%
 \contentsline {chapter}{Literatura}{58}{chapter*.10}%

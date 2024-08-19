@@ -1,36 +1,36 @@
 \section{Prostředí pro agenta}
-K vizualizaci autonomního agenta lze přistupovat různými způsoby, od použití vysokoúrovňových herních enginů nebo lze od základu si postavit vlastní engine, pomocí kterého poté lze vytvořit vizualizér. Jako praktický a realistický příklad využijeme Unreal Engine, který se velice často používa k vytvoření 3D akčních her. V této vizualizaci navrhneme prostředí které bude obsahovat několik překážek či budov, které budou představovat dodatečnou obtížnost pro nepřátelského, ale i přátelského agenta při učení.
+K~vizualizaci autonomního agenta lze přistupovat různými způsoby, od použití vysokoúrovňových herních enginů až po vytvoření vlastního enginu, pomocí kterého lze následně vytvořit vizualizér. Jako praktický a~realistický příklad využijeme Unreal Engine, který se často používá k~tvorbě 3D akčních her. V~této vizualizaci navrhneme prostředí, které bude obsahovat několik překážek a~budov, jež budou představovat dodatečnou obtížnost pro nepřátelské i~přátelské agenty při~učení.
 
-V Unreal Engine vytvoříme mapu, která bude obsahovat část rozpadlého města, kde se budou nacházet různé budovy, ale i park a různé ostatní překážky pro hráče, přátelské či nepřátelské agenty. Mapa bude naplněna převážně prostředky získanými z tržiště Unreal Marketplace, ale také prostředky vlastní výroby. Mapa bude obsahovat počáteční oblast, kde hráč bude začínat, ale kde zároveň se budou nacházet prostředky, pomocí kterých se bude snažit přežít s pomocí přátelských agentu proti agentům nepřátelských.
+V~Unreal Engine vytvoříme mapu, která bude obsahovat část rozpadlého města, kde se budou nacházet různé budovy, park a~další překážky pro hráče, přátelské i~nepřátelské agenty. Mapa bude převážně naplněna prostředky získanými z~tržiště Unreal Marketplace, ale také prostředky vlastní výroby. Bude obsahovat počáteční oblast, kde hráč začne a~kde se zároveň budou nacházet prostředky, které mu pomohou přežít s~pomocí přátelských agentů proti nepřátelským agentům.
 
-Herní mapa bude obsahovat různorodé oblasti, jako např. otevřenější část, ale také uzavřenější část obklopenou budovami. Uzavřená oblast nabídne strategické výzvy a výhody, například krytí poskytované různými objekty, které lze takticky využít během střetů. Některé části mapy budou také obsahovat nebezpečné prvky, které mohou způsobit poškození, pokud se hráč nebo agenti přiblíží k tomuto nebezpečnému prvku.
+Herní mapa bude obsahovat různorodé oblasti, jako například otevřenější část a~uzavřenější část obklopenou budovami. Uzavřená oblast nabídne strategické výzvy a~výhody, například krytí poskytované různými objekty, které lze takticky využít během střetů. Některé části mapy budou také obsahovat nebezpečné prvky, které mohou způsobit poškození, pokud se hráč nebo agenti k~těmto prvkům přiblíží.
 
-Přátelští ale i nepřátelští agenti po zničení budou odhazovat různé předměty, které lze sebrat a hráči dokáží nějak pomoct. Hráč bude mít přístup k "náhlavnímu displeji" (HUD) na obrazovce, kde bude moct sledovat důležité informace o sobě, ale HUD také usnadní navigaci v hlavním menu a menu pauzy.
+Přátelští i~nepřátelští agenti po zničení odhodí různé předměty, které hráč může sebrat a~které mu nějak pomohou. Hráč bude mít přístup k "náhlavnímu displeji" (HUD) na obrazovce, kde bude moci sledovat důležité informace o~sobě. HUD také usnadní navigaci v~hlavním menu a~menu pauzy.
 
 \newpage
 
-\section{Algoritmy pro vytvoření agenta v akční hře}
+\section{Algoritmy pro vytvoření agenta v~akční hře}
 Oba algoritmy jsou založené na Q-Learning algoritmu.
 \subsubsection{Q-Learning}
-Q-Learning\cite{Watkins1992} je populární algoritmus RL, který se používá k určení optimální politiky výběru akce pro agenta, který reaguje na prostředí. Pracuje v diskrétních časových krocích a jeho cílem je naučit se optimální politiku iterativní aktualizací hodnot Q, které představují očekávanou užitečnost provedení určité akce v daném stavu.
+Q-Learning\cite{Watkins1992} je populární algoritmus RL, který se používá k~určení optimální politiky výběru akce pro agenta, který reaguje na prostředí. Pracuje v~diskrétních časových krocích a~jeho cílem je naučit se optimální politiku iterativní aktualizací hodnot Q, které představují očekávanou užitečnost provedení určité akce v~daném stavu.
 
-V Q-Learning si agent vede Q-tabulku, kde každá položka \textit{Q(s, a)} představuje odhadovanou hodnotu přijetí akce \textit{a} ve stavu \textit{s}. Agent aktualizuje tyto hodnoty Q na základě získaných odměn a odhadovaných budoucích odměn. Konkrétně po provedení akce a pozorování výsledné odměny a nového stavu se hodnota Q aktualizuje pomocí Bellmanovy rovnice:
+V~Q-Learning si agent vede Q-tabulku, kde každá položka \textit{Q(s, a)} představuje odhadovanou hodnotu přijetí akce \textit{a} ve stavu \textit{s}. Agent aktualizuje tyto hodnoty Q na základě získaných odměn a~odhadovaných budoucích odměn. Konkrétně po provedení akce a~pozorování výsledné odměny a~nového stavu se hodnota Q aktualizuje pomocí Bellmanovy rovnice:
 
 \begin{equation}
 Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
 \label{eq3.1}
 \end{equation}
 
-Zde $\alpha$ je míra učení, $\gamma$ je diskontní faktor, \textit{r} je získaná odměna a \textit{s'} je nový stav. Výraz \textit{$\max_{a'} Q(s', a'$)} představuje maximální odhadovanou budoucí odměnu za nový stav. Tímto procesem se Q-Learning snaží konvergovat k optimálním hodnotám Q, z nichž lze odvodit optimální politiku výběrem akcí s nejvyššími hodnotami Q pro každý stav.
+Zde $\alpha$ je míra učení, $\gamma$ je diskontní faktor, \textit{r} je získaná odměna a \textit{s'} je nový stav. Výraz \textit{$\max_{a'} Q(s', a')$} představuje maximální odhadovanou budoucí odměnu za nový stav. Tímto procesem se Q-Learning snaží konvergovat k~optimálním hodnotám Q, z~nichž lze odvodit optimální politiku výběrem akcí s~nejvyššími hodnotami Q pro každý stav.
 
 \subsection{SARSA (State-Action-Reward-State-Action)}
-\textbf{SARSA}(Stav-Akce-Odměna-Stav-Akce)\cite{Sutton1998} je RL algoritmus na základě politiky, který se používá k nalezení optimální politiky pro agenta, který interaguje s prostředím. Název \uv{SARSA} je odvozen od posloupnosti událostí, které používá k aktualizaci hodnot Q: aktuální stav \textit{s}, akce provedená v tomto stavu \textit{a}, odměna získaná po provedení akce \textit{s}, další stav \textit{s'} a další akce provedená v novém stavu \textit{a'}.
+\textbf{SARSA} (Stav-Akce-Odměna-Stav-Akce)\cite{Sutton1998} je RL algoritmus založený na politice, který se používá k~nalezení optimální politiky pro agenta interagujícího s~prostředím. Název \uv{SARSA} je odvozen od posloupnosti událostí, které používá k~aktualizaci hodnot Q: aktuální stav \textit{s}, akce provedená v~tomto stavu \textit{a}, odměna získaná po provedení akce \textit{r}, další stav \textit{s'}, a~další akce provedená v~novém stavu \textit{a'}.
 
-Jádrem metody SARSA je odhad funkce \textbf{Q-hodnoty}, \textit{Q(s, a)}, která představuje očekávanou kumulativní odměnu za provedení akce \textit{a} ve stavu \textit{s} a následné dodržování určité politiky. Na rozdíl od jiných algoritmů učení s posilováním, jako je Q-Learning, který je off-policy, je SARSA algoritmus on-policy. To znamená, že aktualizuje své hodnoty Q na základě akcí skutečně provedených agentem podle jeho aktuální politiky, včetně akcí průzkumu. 
+Jádrem metody SARSA je odhad funkce \textbf{Q-hodnoty}, \textit{Q(s, a)}, která představuje očekávanou kumulativní odměnu za provedení akce \textit{a} ve stavu \textit{s} a~následné dodržování určité politiky. Na rozdíl od jiných algoritmů učení s~posilováním, jako je Q-learning, který je off-policy, je SARSA algoritmus on-policy. To znamená, že aktualizuje své hodnoty Q na základě akcí skutečně provedených agentem podle jeho aktuální politiky, včetně akcí průzkumu. 
 
 \newpage
 
-Díky tomu je SARSA obzvláště užitečná v prostředích, kde je politika agenta nedeterministická nebo kde agent potřebuje vyvážit průzkum (zkoušení nových akcí) a využití (výběr nejlepší známé akce).
+Díky tomu je SARSA obzvláště užitečná v~prostředích, kde je politika agenta nedeterministická nebo kde agent potřebuje vyvážit průzkum (zkoušení nových akcí) a~využití (výběr nejlepší známé akce).
 
 Pravidlo aktualizace pro SARSA zní:
 
@@ -50,31 +50,30 @@ kde:
 
 Algoritmus \textbf{SARSA} funguje následovně:
 \begin{enumerate}
-    \item \textbf{Inicializace:} Inicializujte funkci Q-hodnoty \textit{Q(s, a)} libovolně pro všechny dvojice stav-akce \textit{(s, a)}. Inicializujte míru učení \textit{$\alpha$}, diskontní faktor \textit{$\gamma$} a politiku průzkumu \textit{$\epsilon$}.
+    \item \textbf{Inicializace:} Inicializujte funkci Q-hodnoty \textit{Q(s, a)} libovolně pro všechny dvojice stav-akce \textit{(s, a)}. Inicializujte míru učení \textit{$\alpha$}, diskontní faktor \textit{$\gamma$} a~politiku průzkumu \textit{$\epsilon$}.
     
-    \item \textbf{Zahájení epizody:} Pozoruje počáteční stav \textit{s} a zvolí akci \textit{a} na základě aktuální politiky (např. \textit{$\epsilon-greedy$}).
+    \item \textbf{Zahájení epizody:} Pozoruje počáteční stav \textit{s} a~zvolí akci \textit{a} na základě aktuální politiky (např. \textit{$\epsilon-greedy$}).
     
-    \item \textbf{Provedení akce:} Provede akci \textit{a}, sleduje odměnu \textit{r} a další stav \textit{s'}.
+    \item \textbf{Provedení akce:} Provede akci \textit{a}, sleduje odměnu \textit{r} a~další stav \textit{s'}.
     
     \item \textbf{Výběr další akce:} Vybere další akci \textit{a'} ve stavu \textit{s'} pomocí aktuální politiky.
     
     \item \textbf{Aktualizace hodnoty Q:} Aktualizuje hodnotu Q pro aktuální dvojici stav-akce \textit{(s, a)} pomocí pravidla \ref{eq3.2}
  
     
-\item \textbf{Přechod:} Nastaví $\textit{s} \leftarrow \textit{s'}$ a $\textit{a} \leftarrow \textit{a'}$. Opakuje kroky 3 až 5, dokud epizoda neskončí.
+\item \textbf{Přechod:} Nastaví $\textit{s} \leftarrow \textit{s'}$ a $\textit{a} \leftarrow \textit{a'}$. Opakuje kroky 3~až 5, dokud epizoda neskončí.
     
-    \item \textbf{Konec epizody:} Pokud epizoda skončí, spustí novou epizodu a postup opakuje až do konvergence.
+    \item \textbf{Konec epizody:} Pokud epizoda skončí, spustí novou epizodu a~postup opakuje až do konvergence.
 \end{enumerate}
 
-SARSA obvykle používá \textit{$\epsilon-greedy$} politiku, kde agent vybírá akci, o které se domnívá, že má nejvyšší hodnotu Q s pravděpodobností \textit{$1-\epsilon$} a zkoumá náhodné akce s pravděpodobností \textit{$\epsilon$}. Tato rovnováha umožňuje agentovi dostatečně prozkoumat prostředí a zároveň využít znalosti, které nashromáždil.
+SARSA obvykle používá \textit{$\epsilon-greedy$} politiku, kde agent vybírá akci, o~které se domnívá, že má nejvyšší hodnotu Q s~pravděpodobností \textit{$1-\epsilon$} a~zkoumá náhodné akce s~pravděpodobností \textit{$\epsilon$}. Tato rovnováha umožňuje agentovi dostatečně prozkoumat prostředí a~zároveň využít znalosti, které nashromáždil.
 
-SARSA se nejčastěji používá na automatické hraní her nebo v robotice může pomoci při výcviku robotů, aby se lépe orientovali v prostředí, kde nemusí být důsledky akcí okamžitě zřejmé.
+SARSA se nejčastěji používá na automatické hraní her nebo v~robotice, kde může pomoci při~výcviku robotů, aby se lépe orientovali v~prostředí, kde nemusí být důsledky akcí okamžitě zřejmé.
 
 \newpage
 
 \subsection{Deep Q-Learning}
-Deep Q-Learning (DQL)\cite{Nuer2022}\cite{GfG2023} je rozšířením tradičního algoritmu Q-Learning, které je speciálně navrženo pro práci s komplexními prostředími s vysokodimenzionálními stavovými prostory, jaké se vyskytují například ve videohrách nebo v robotice. V klasickém Q-Learningu se k ukládání hodnot dvojic stav-akce používá Q-tabulka. Tento přístup se však stává nepraktickým, pokud se jedná o prostředí, kde je stavový prostor příliš velký na to, aby jej bylo možné explicitně reprezentovat. DQL toto omezení překonává využitím hlubokých neuronových sítí k aproximaci funkce Q, která mapuje stavy na hodnoty Q pro každou možnou akci. Takže namísto udržování velké tabulky hodnot Q se použije hluboká neuronová síť k předpovídání hodnot Q pro každou akci danou konkrétním stavem. Tato neuronová síť, často označovaná jako Q-síť, přijímá jako vstup aktuální stav prostředí a na výstupu má vektor Q-hodnot, jeden pro každou možnou akci. Akce s nejvyšší hodnotou Q je pak vybrána v souladu se zásadami.
-
+Deep Q-Learning (DQL)\cite{Nuer2022}\cite{GfG2023} je rozšířením tradičního algoritmu Q-Learning, které je speciálně navrženo pro práci s~komplexními prostředími s~vysokodimenzionálními stavovými prostory, jaké se vyskytují například ve videohrách nebo v~robotice. V~klasickém Q-Learningu se k~ukládání hodnot dvojic stav-akce používá Q-tabulka. Tento přístup se však stává nepraktickým v~prostředích, kde je stavový prostor příliš velký na to, aby jej bylo možné explicitně reprezentovat. DQL toto omezení překonává využitím hlubokých neuronových sítí k~aproximaci funkce Q, která mapuje stavy na hodnoty Q pro každou možnou akci. Namísto udržování velké tabulky hodnot Q se použije hluboká neuronová síť k~předpovídání hodnot Q pro každou akci danou konkrétním stavem. Tato neuronová síť, často označovaná jako Q-síť, přijímá jako vstup aktuální stav prostředí a~na výstupu poskytuje vektor Q-hodnot, jeden pro každou možnou akci. Akce s~nejvyšší hodnotou Q je pak vybrána v~souladu se zásadami.
 
 \begin{figure}[ht]
 \includegraphics[scale=0.45]{3-1.png}
@@ -83,15 +82,15 @@ Deep Q-Learning (DQL)\cite{Nuer2022}\cite{GfG2023} je rozšířením tradičníh
 \label{obrADQL}
 \end{figure}
 
-Trénování sítě Q spočívá v minimalizaci rozdílu mezi předpovídanou hodnotou Q a cílovou hodnotou Q, která se vypočítá pomocí Bellmanovy rovnice. Cílová hodnota Q se vypočítá jako součet okamžité odměny a diskontované maximální budoucí odměny, kterou odhaduje samotná Q-síť. To přináší problém nestability během trénování, protože cílová hodnota závisí také na vahách sítě. Ke zmírnění tohoto problému využívá metoda Deep Q-Learning dvě klíčové techniky: přehrávání minulosti a cílová síť.
+Trénování sítě Q spočívá v~minimalizaci rozdílu mezi předpovídanou hodnotou Q a~cílovou hodnotou Q, která se vypočítá pomocí Bellmanovy rovnice. Cílová hodnota Q se vypočítá jako součet okamžité odměny a~diskontované maximální budoucí odměny, kterou odhaduje samotná Q-síť. Tento přístup však přináší problém nestability během trénování, protože cílová hodnota závisí také na vahách sítě. Ke zmírnění tohoto problému využívá metoda Deep Q-Learning dvě klíčové techniky: přehrávání minulosti a~cílovou síť.
 
 \newpage
 
-Přehrávání minulosti je metoda, při níž je minulost agenta, reprezentovaná jako tuply stavu, akce, odměny a dalšího stavu, ukládána do vyrovnávací paměti pro znovupoužití. Během tréninku se z této vyrovnávací paměti náhodně vybírají tuply, aby se přerušila korelace mezi po sobě jdoucími stavy, a tím se stabilizovalo učení. To umožňuje síti učit se z rozmanitějšího souboru, což zlepšuje celkovou robustnost politiky.
+Přehrávání minulosti je metoda, při~níž je historie agenta, reprezentovaná jako tupl stavu, akce, odměny a~následujícího stavu, ukládána do vyrovnávací paměti pro opětovné použití. Během tréninku se z~této vyrovnávací paměti náhodně vybírají tuply, aby se přerušila korelace mezi po sobě jdoucími stavy, čímž se stabilizuje učení. To umožňuje síti učit se z~rozmanitějšího souboru dat, což zlepšuje celkovou robustnost politiky.
 
-Cílová síť je druhá síť DQL, která má identickou architekturu jako síť Q, ale její parametry se aktualizují méně často. Tato síť se používá k vytváření cílových hodnot Q, což zajišťuje, že aktualizace směřují ke stabilnějšímu cíli. Váhy cílové sítě jsou pravidelně aktualizovány kopírováním vah Q-sítě, což pomáhá dále stabilizovat proces učení.
+Cílová síť je druhá síť v~DQL, která má identickou architekturu jako Q-síť, ale její parametry se aktualizují méně často. Tato síť se používá k~vytváření cílových hodnot Q, což zajišťuje, že aktualizace směřují ke stabilnějšímu cíli. Váhy cílové sítě jsou pravidelně aktualizovány kopírováním vah Q-sítě, což dále pomáhá stabilizovat proces učení.
 
-Na obrázku \ref{obrDNN} je vidět návrh sítě pro Deep Q-Learning, kde se nachází vstupní vrstva s 10 uzly, tři schované vrstvy, kde každá má 32 uzlů a nakonec jedna výstupní vrstva se 605 uzly, neboli jedna výstupní vrstva pro každou možnou akci. Vstupní a výstupní vrstvy používají lineární aktivační funkci a všechny schované vrstvy používají ReLu aktivační funkci.
+Na obrázku \ref{obrDNN} je vidět návrh sítě pro Deep Q-Learning, kde se nachází vstupní vrstva s~10 uzly, tři~skryté vrstvy, z~nichž každá má 32 uzlů, a~nakonec jedna výstupní vrstva se 605 uzly, tedy jedna výstupní vrstva pro každou možnou akci. Vstupní a~výstupní vrstvy používají lineární aktivační funkci, zatímco všechny skryté vrstvy používají ReLU aktivační funkci.
 
 \begin{figure}[ht]
 \includegraphics[scale=1.2]{3-2.png}
@@ -106,46 +105,45 @@ Kroky algoritmu DQL:
 \begin{enumerate}
     \item \textbf{Inicializace}:
     \begin{itemize}
-        \item Inicializace \textbf{Q-sítě} s náhodnými váhami. Tato neuronová síť bude aproximovat Q-funkci, která předpovídá hodnotu každé akce na základě stavu.
-        \item Inicializace \textbf{cílové sítě} se stejnou architekturou a váhami jako Q-síť. Cílová síť bude použita k výpočtu stabilních cílových Q-hodnot.
-        \item Nastavení \textbf{přehrávacího bufferu} pro uchovávání minulosti agenta. Tento buffer pomůže přerušit korelaci mezi po sobě jdoucími stavy a poskytne různorodý soubor tréninkových dat.
+        \item Inicializace \textbf{Q-sítě} s~náhodnými váhami. Tato neuronová síť bude aproximovat Q-funkci, která předpovídá hodnotu každé akce na základě stavu.
+        \item Inicializace \textbf{cílové sítě} se stejnou architekturou a~váhami jako Q-síť. Cílová síť bude použita k~výpočtu stabilních cílových Q-hodnot.
+        \item Nastavení \textbf{přehrávacího bufferu} pro uchovávání minulosti agenta. Tento buffer pomůže přerušit korelaci mezi po sobě jdoucími stavy a~poskytne různorodý soubor tréninkových dat.
     \end{itemize}
-    \item \textbf{Interakce s prostředím}:
+    \item \textbf{Interakce s~prostředím}:
     \begin{itemize}
         \item Pro každou epizodu:
         \begin{itemize}
-            \item \textbf{Resetujte prostředí} na počáteční stav a inicializujte epizodu.
-            \item Pro každý časový krok v epizodě:
+            \item \textbf{Resetujte prostředí} na počáteční stav a~inicializujte epizodu.
+            \item Pro každý časový krok v~epizodě:
             \begin{itemize}
-                \item \textbf{Vyberte akci}: Vyberte akci $a$ pomocí $\epsilon-greedy$ politiky. S pravděpodobností $1 - \epsilon$ vyberte akci s nejvyšší Q-hodnotou, jak ji předpovídá Q-síť. S pravděpodobností $\epsilon$ vyberte náhodnou akci pro zajištění explorace.
-                \item \textbf{Proveďte akci}: Proveďte zvolenou akci $a$ v prostředí a pozorujte získanou odměnu $r$ a následující stav $s'$.
+                \item \textbf{Vyberte akci}: Vyberte akci $a$ pomocí $\epsilon-greedy$ politiky. S~pravděpodobností $1 - \epsilon$ vyberte akci s~nejvyšší Q-hodnotou, jak ji předpovídá Q-síť. S~pravděpodobností $\epsilon$ vyberte náhodnou akci pro zajištění explorace.
+                \item \textbf{Proveďte akci}: Proveďte zvolenou akci $a$ v~prostředí a~pozorujte získanou odměnu $r$ a~následující stav $s'$.
                 \item \textbf{Uložte zkušenost}: Přidejte dvojici $(s, a, r, s')$ do přehrávacího bufferu.
-                \item \textbf{Vytvořte mini-batch}: Náhodně vyberte mini-batch zkušeností z přehrávacího bufferu.
-                \item \textbf{Aktualizujte Q-síť}: Pro každou zkušenost v mini-batch:
+                \item \textbf{Vytvořte mini-batch}: Náhodně vyberte mini-batch zkušeností z~přehrávacího bufferu.
+                \item \textbf{Aktualizujte Q-síť}: Pro každou zkušenost v~mini-batch:
                 \begin{itemize}
                     \item Vypočítejte \textbf{cílovou Q-hodnotu} pomocí cílové sítě:
                     \[
                     y = r + \gamma \cdot \max_{a'} Q_{\text{target}}(s', a')
                     \]
                     kde $\gamma$ je diskontní faktor a $\max_{a'} Q_{\text{target}}(s', a')$ je maximální Q-hodnota pro následující stav $s'$ podle cílové sítě.
-                    \item Aktualizujte Q-síť minimalizováním \textbf{průměrné kvadratické chyby} mezi předpovězenou Q-hodnotou a cílovou Q-hodnotou:
+                    \item Aktualizujte Q-síť minimalizováním \textbf{průměrné kvadratické chyby} mezi předpovězenou Q-hodnotou a~cílovou Q-hodnotou:
                     \[
-                    \text{Loss} = \left( Q(s, a) - y \right)^2
-                    \]
+                    \text{Loss} = \left( Q(s, a) - y \right)^2~\]
                 \end{itemize}
-                \item \textbf{Periodická aktualizace}: Periodicky aktualizujte váhy cílové sítě zkopírováním vah z Q-sítě.
+                \item \textbf{Periodická aktualizace}: Periodicky aktualizujte váhy cílové sítě zkopírováním vah z~Q-sítě.
             \end{itemize}
         \end{itemize}
     \end{itemize}
     
     \item \textbf{Opakování}:
     \begin{itemize}
-        \item Pokračujte v uvedených krocích pro každou epizodu, dokud proces učení nezkonverguje nebo nedosáhne kritéria zastavení.
+        \item Pokračujte v~uvedených krocích pro každou epizodu, dokud proces učení nezkonverguje nebo nedosáhne kritéria zastavení.
     \end{itemize}
     
     \item \textbf{Hodnocení}:
     \begin{itemize}
-        \item Hodnoťte naučenou politiku testováním agenta v prostředí, sledujte jeho výkon a podle potřeby upravte parametry.
+        \item Hodnoťte naučenou politiku testováním agenta v~prostředí, sledujte jeho výkon a~podle potřeby upravte parametry.
     \end{itemize}
 \end{enumerate}
 
@@ -154,15 +152,15 @@ Kroky algoritmu DQL:
 \subsection{Rozdíly mezi těmito algoritmy}
 SARSA vs DQL:
 \begin{itemize}
-	\item \textbf{On-Policy vs Off-Policy:} SARSA aktualizuje Q-hodnoty na základě akcí prováděných současnou politikou, což vede k stabilnímu učení. DQL naopak používá přehrávání minulosti a cílové sítě pro stabilní a efektivní učení.
-     \item \textbf{Jednoduchost:} SARSA má snadnou implementaci a pochopení, vhodné pro malé prostory stavů a akcí. DQL naopak je složitější na implementaci a ladění.
-     \item \textbf{Explorace:} SARSA konzervativně exploruje a tím snižuje riziko nesprávného učení, ale má problém s vyvážením explorace a využitím. DQL zase lépe řídí vyvážení mezi explorací a využitím, ale může se špatně naučit.
-     \item \textbf{Tabulární omezení:} SARSA je nevhodné pro velké nebo kontinuální prostory stavů. DQL naopak dobře zvládá velké a kontinuální prostory stavy díky hlubokým neuronovým sítím.
-     \item \textbf{Potenciální suboptimálnost:} SARSA může konvergovat k suboptimálním politikám, pokud není explorace dobře řízena. DQL zase může trpět nestabilitou, i když pokročilé techniky mohou toto zmírnit.
-     \item \textbf{Požadavky na výpočetní výkon:} DQL potřebuje značné výpočetní zdroje a čas. SARSA díky jednoduchosti je nenáročná.
+	\item \textbf{On-Policy vs Off-Policy:} SARSA aktualizuje Q-hodnoty na základě akcí prováděných současnou politikou, což vede k~stabilnímu učení. DQL naopak používá přehrávání minulosti a~cílové sítě pro stabilní a~efektivní učení.
+     \item \textbf{Jednoduchost:} SARSA má snadnou implementaci a~pochopení, vhodné pro malé prostory stavů a~akcí. DQL naopak je složitější na implementaci a~ladění.
+     \item \textbf{Explorace:} SARSA konzervativně exploruje a~tím snižuje riziko nesprávného učení, ale má problém s~vyvážením explorace a~využitím. DQL zase lépe řídí vyvážení mezi explorací a~využitím, ale může se špatně naučit.
+     \item \textbf{Tabulární omezení:} SARSA je nevhodné pro velké nebo kontinuální prostory stavů. DQL naopak dobře zvládá velké a~kontinuální prostory stavy díky hlubokým neuronovým sítím.
+     \item \textbf{Potenciální suboptimálnost:} SARSA může konvergovat k~suboptimálním politikám, pokud není explorace dobře řízena. DQL zase může trpět nestabilitou, i~když pokročilé techniky mohou toto zmírnit.
+     \item \textbf{Požadavky na výpočetní výkon:} DQL potřebuje značné výpočetní zdroje a~čas. SARSA díky jednoduchosti je nenáročná.
 \end{itemize}
 
 \subsection{Použití obou algoritmů pro vytvoření agenta}
-DQL je obecně lépe přizpůsoben pro složité herní AI s velkými prostory stavů a různorodými scénáři díky jeho schopnosti efektivně řídit exploraci a využití a navíc zvládat složité prostředí prostřednictvím hlubokých neuronových sítí, ale SARSA stále může být použit v jednodušších nebo více kontrolovaných prostředích, kde jsou prostory stavů a akcí zvládnutelné, a kde jsou přednostmi stabilita a jednoduchost implementace před zvládáním komplexity. 
+DQL je obecně lépe přizpůsoben pro složité herní AI s~velkými prostory stavů a~různorodými scénáři~díky své schopnosti efektivně řídit exploraci a~využití, a~navíc zvládat složité prostředí prostřednictvím hlubokých neuronových sítí. SARSA však stále může být použita v~jednodušších nebo více kontrolovaných prostředích, kde jsou prostory stavů a~akcí zvládnutelné, a~kde jsou přednostmi stabilita a~jednoduchost implementace před zvládáním komplexity. 
 
-Díky těmto znalostem dostanou oba algoritmy tohoto agenta vlastní úkol. Agent se bude skládat z logiky na oblékání svých jednotek, kde se využije SARSA, protože je to velice kontrolované prostředí, kde se nemůže neustále náhodně měnit, bude mít algoritmus pouze předem určené množství různého vybavení, podle kterého bude moct sestrojit vojáky. Pro samotné AI, které se bude rozhodovat na bitevním poli, se použije Deep Q-Learning právě kvůli složitosti prostředí a neustále se měnícím podmínkám, které budou často mezi sebou neporovnatelné hlavně i díky hráčovi, který se bude zapojovat do bitev, protože hra bude z pohledu první osoby a nebude pouze ovládat svoje vojáky. Hráčovo vojáci nebudou obsahovat SARSA část logiky, protože hráč si bude sestavovat vojáky sám, ale stále jejich hlavní logika bude fungovat jako u nepřátelského AI pomocí Deep Q-Learning.
+Díky této rozdílnosti lze oba algoritmy použít pro sestrojení tohoto agenta. Agent se bude skládat z~logiky na oblékání svých jednotek, kde se využije SARSA, protože je to velice kontrolované prostředí, kde se nic nemůže náhodně měnit, protože bude mít algoritmus pouze předem určené množství různého vybavení, podle kterého bude moci sestrojit vojáky. Pro samotné AI, které se bude rozhodovat na bitevním poli, se použije Deep Q-Learning právě kvůli složitosti prostředí a~neustále se měnícím podmínkám, které budou často mezi sebou neporovnatelné, hlavně i~díky hráči, který se bude zapojovat do bitev, protože hra bude z~pohledu první osoby, neboli hráč nebude pouze ovládat své vojáky jako ve strategických hrách. Hráčovi vojáci nebudou obsahovat SARSA část logiky, protože hráč si bude sestavovat vojáky sám, ale stále jejich hlavní logika bude fungovat jako u~nepřátelského AI pomocí Deep Q-Learning.
