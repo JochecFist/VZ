@@ -42,6 +42,6 @@
 \contentsline {section}{\numberline {4.2}Typy hodnocení}{55}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Podle efektivity zabití nepřátel}{55}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Podle efektivity přežití}{55}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Efektivita zabití a~přežití}{55}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Kombinace předchozích hodnocení}{55}{subsection.4.2.3}%
 \contentsline {chapter}{Závěr}{57}{chapter*.10}%
 \contentsline {chapter}{Literatura}{58}{chapter*.10}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  19 AUG 2024 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.20)  20 AUG 2024 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1018,9 +1018,16 @@ ated _ Stock _ Market$[]\T1/cmr/m/n/12 .
  []
 
 [62] (./Strojové učení pro adaptaci autonomních agentů.aux)
-Package rerunfilecheck Info: File `"Strojové učení pro adaptaci autonomních
- agentů".out' has not changed.
-(rerunfilecheck)             Checksum: FB238BE5B7840C9580C6077A300224AE;7452.
+
+Package rerunfilecheck Warning: File `"Strojové učení pro adaptaci autonomn�
+�ch agentů".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Strojové učení pro adaptaci aut
+onomních agentů".out':
+(rerunfilecheck)             Before: A4F8EB223E7874C092A7A2997C836738;7448
+(rerunfilecheck)             After:  DC95E4794DA3742CA831B63A029F37EA;7466.
  ) 
 Here is how much of TeX's memory you used:
  13570 strings out of 480437
@@ -1053,7 +1060,7 @@ exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/Programs/te
 xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/Programs/tex
 live/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
 Output written on "Strojové učení pro adaptaci autonomních agentů.pdf" (62
- pages, 2342649 bytes).
+ pages, 2342673 bytes).
 PDF statistics:
  905 PDF objects out of 1000 (max. 8388607)
  756 compressed objects within 8 object streams
